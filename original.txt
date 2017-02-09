@@ -1,4 +1,4 @@
-attribute vector: [colorfulness: {0, 1, 2},
+attribute vector: colorfulness: {0, 1, 2},
 		   color_diversity: {0, 1, 2},
 		   brightness: {0, 1, 2},
 		   human_present?: {0, 1},
@@ -7,11 +7,11 @@ attribute vector: [colorfulness: {0, 1, 2},
 		   action(how much is going on): {0, 1},
 		   seriousness/intensity: {0, 1, 2},
 		   paint_or_pen/pencil?: {0, 1, 2=neither},
-		   landscape_or_portrait: {0, 1, 2=square}]
+		   landscape_or_portrait: {0, 1, 2=square}
 
 -------------------SURREALIST (scrape from https://www.artsy.net/gene/surrealism)--------------------------
-https://www.artsy.net/artwork/frida-kahlo-frida-and-diego-rivera
-[colorfulness: 2,
+url: https://www.artsy.net/artwork/frida-kahlo-frida-and-diego-rivera
+colorfulness: 2,
 color_diversity: 1,
 brightness: 1,
 human_present?: 1,
@@ -20,10 +20,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/frida-kahlo-la-venadita-little-deer
-[colorfulness: 1,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/frida-kahlo-la-venadita-little-deer
+colorfulness: 1,
 color_diversity: 1,
 brightness: 1,
 human_present?: 1,
@@ -32,10 +31,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/frida-kahlo-self-portrait-on-the-border-line-between-mexico-and-the-united-states
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/frida-kahlo-self-portrait-on-the-border-line-between-mexico-and-the-united-states
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 1,
@@ -44,10 +42,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 2,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 2]
-
-https://www.artsy.net/artwork/rene-magritte-the-menaced-assassin-lassassin-menace
-[colorfulness: 1,
+landscape_or_portrait: 2
+url: https://www.artsy.net/artwork/rene-magritte-the-menaced-assassin-lassassin-menace
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -56,10 +53,9 @@ day_or_night: 1,
 action(how much is going on): 1,
 seriousness/intensity: 2,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait ?: 0]
-
-https://www.artsy.net/artwork/rene-magritte-the-false-mirror-le-faux-miroir
-[colorfulness: 1,
+landscape_or_portrait ?: 0
+url: https://www.artsy.net/artwork/rene-magritte-the-false-mirror-le-faux-miroir
+colorfulness: 1,
 color_diversity: 1,
 brightness: 1,
 human_present?: 1,
@@ -68,10 +64,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 2,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/rene-magritte-the-lovers-les-amants
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/rene-magritte-the-lovers-les-amants
+colorfulness: 1,
 color_diversity: 1,
 brightness: 0,
 human_present?: 1,
@@ -80,10 +75,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 2,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/max-ernst-humboldt-current
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/max-ernst-humboldt-current
+colorfulness: 1,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -92,10 +86,9 @@ day_or_night: 1,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/max-ernst-europe-after-the-rain
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/max-ernst-europe-after-the-rain
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 1,
@@ -104,22 +97,20 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/salvador-dali-mae-wests-face-which-may-be-used-as-a-surrealist-apartment
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/salvador-dali-mae-wests-face-which-may-be-used-as-a-surrealist-apartment
+colorfulness: 2,
 color_diversity: 2,
 brightness: 0,
 human_present?: 1,
 animal_present?: 0,
-day_or_night: {2,
+day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 2,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/salvador-dali-invisible-lion-horse-sleeping-woman
-[colorfulness: 1,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/salvador-dali-invisible-lion-horse-sleeping-woman
+colorfulness: 1,
 color_diversity: 2,
 brightness: 1,
 human_present?: 1,
@@ -128,10 +119,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/salvador-dali-untitled-surrealist-composition
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/salvador-dali-untitled-surrealist-composition
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -140,10 +130,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/salvador-dali-inventions-of-the-monsters
-[colorfulness: 1,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/salvador-dali-inventions-of-the-monsters
+colorfulness: 1,
 color_diversity: 2,
 brightness: 0,
 human_present?: 1,
@@ -152,10 +141,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 2,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/salvador-dali-venus-de-milo-with-drawers
-[colorfulness: 0,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/salvador-dali-venus-de-milo-with-drawers
+colorfulness: 0,
 color_diversity: 0,
 brightness: 1,
 human_present?: 1,
@@ -164,10 +152,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/yves-tanguy-el-saltimbanqui-reste-el-le-faut
-[colorfulness: 1,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/yves-tanguy-el-saltimbanqui-reste-el-le-faut
+colorfulness: 1,
 color_diversity: 2,
 brightness: 1,
 human_present?: 0,
@@ -176,22 +163,20 @@ day_or_night: 2,
 action(how much is going on): 2,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/yves-tanguy-le-ciel-traque
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/yves-tanguy-le-ciel-traque
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
 animal_present?: 0,
-day_or_night: 1, 2=(unknown)1},
+day_or_night: 1,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/yves-tanguy-imprevu-the-unforeseen
-[colorfulness: 1,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/yves-tanguy-imprevu-the-unforeseen
+colorfulness: 1,
 color_diversity: 2,
 brightness: 1,
 human_present?: 0,
@@ -200,22 +185,20 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 2,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/yves-tanguy-apparitions
-[colorfulness: 1,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/yves-tanguy-apparitions
+colorfulness: 1,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
 animal_present?: 0,
-day_or_night: 1, 2=(unknown)2},
+day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/yves-tanguy-encore-et-toujours-still-and-always
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/yves-tanguy-encore-et-toujours-still-and-always
+colorfulness: 2,
 color_diversity: 2,
 brightness: 1,
 human_present?: 0,
@@ -224,10 +207,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/andre-masson-chimere-et-loup-garou
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/andre-masson-chimere-et-loup-garou
+colorfulness: 2,
 color_diversity: 2,
 brightness: 1,
 human_present?: 0,
@@ -236,10 +218,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 1,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/andre-masson-the-fruits-of-the-abyss-les-fruits-de-l-abime
-[colorfulness: 0,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/andre-masson-the-fruits-of-the-abyss-les-fruits-de-l-abime
+colorfulness: 0,
 color_diversity: 0,
 brightness: 1,
 human_present?: 0,
@@ -248,10 +229,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 1,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/andre-masson-fruits-of-abyss-from-surrealist-portfolio-vvv
-[colorfulness: 0,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/andre-masson-fruits-of-abyss-from-surrealist-portfolio-vvv
+colorfulness: 0,
 color_diversity: 0,
 brightness: 1,
 human_present?: 0,
@@ -260,10 +240,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 1,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/andre-masson-landscape-with-rocks
-[colorfulness: 0,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/andre-masson-landscape-with-rocks
+colorfulness: 0,
 color_diversity: 0,
 brightness: 1,
 human_present?: 0,
@@ -272,10 +251,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 1,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/georges-hugnet-soucoupes-volante
-[colorfulness: 1,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/georges-hugnet-soucoupes-volante
+colorfulness: 1,
 color_diversity: 2,
 brightness: 2,
 human_present?: 0,
@@ -284,10 +262,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/meret-oppenheim-gespenst
-[colorfulness: 0,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/meret-oppenheim-gespenst
+colorfulness: 0,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -296,10 +273,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 1,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/meret-oppenheim-palme-im-sturm
-[colorfulness: 0,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/meret-oppenheim-palme-im-sturm
+colorfulness: 0,
 color_diversity: 0,
 brightness: 1,
 human_present?: 0,
@@ -308,10 +284,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 1,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/victor-brauner-the-encounter-of-2-bis-rue-perrel
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/victor-brauner-the-encounter-of-2-bis-rue-perrel
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 1,
@@ -320,10 +295,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/victor-brauner-the-ice-knight
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/victor-brauner-the-ice-knight
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 1,
@@ -332,10 +306,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/victor-brauner-a-la-decouverte-de-la-conscience-discovering-consciousness
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/victor-brauner-a-la-decouverte-de-la-conscience-discovering-consciousness
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 0,
@@ -344,10 +317,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 2,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/victor-brauner-sevrage-du-moi
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/victor-brauner-sevrage-du-moi
+colorfulness: 2,
 color_diversity: 2,
 brightness: 1,
 human_present?: 1,
@@ -356,10 +328,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 2,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/edward-wadsworth-quiet-outlook-slash-seaweed-and-lighthouse
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/edward-wadsworth-quiet-outlook-slash-seaweed-and-lighthouse
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 0,
@@ -368,10 +339,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/edward-wadsworth-landscape
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/edward-wadsworth-landscape
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -380,10 +350,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/roberto-matta-sexecutant-sexe-ecoutant
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/roberto-matta-sexecutant-sexe-ecoutant
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -392,10 +361,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 2,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 2]
-
-https://www.artsy.net/artwork/roberto-matta-the-disasters-of-mysticism
-[colorfulness: 2,
+landscape_or_portrait: 2
+url: https://www.artsy.net/artwork/roberto-matta-the-disasters-of-mysticism
+colorfulness: 2,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -404,10 +372,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/witold-gordon-untitled-4
-[colorfulness: 0,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/witold-gordon-untitled-4
+colorfulness: 0,
 color_diversity: 0,
 brightness: 1,
 human_present?: 0,
@@ -416,12 +383,11 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 1,
-landscape_or_portrait: 0]
+landscape_or_portrait: 0
 
-----------------IMPRESSIONIST (scrape from https://www.artsy.net/gene/impressionism)---------------
-
-https://www.artsy.net/artwork/pierre-auguste-renoir-dance-at-le-moulin-de-la-galette-bal-du-moulin-de-la-galette
-[colorfulness: 2,
+----------------IMPRESSIONIST (scrape from url: https://www.artsy.net/gene/impressionism)---------------
+url: https://www.artsy.net/artwork/pierre-auguste-renoir-dance-at-le-moulin-de-la-galette-bal-du-moulin-de-la-galette
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 1,
@@ -430,10 +396,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/pierre-auguste-renoir-pont-neuf-paris
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/pierre-auguste-renoir-pont-neuf-paris
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 1,
@@ -442,10 +407,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/edgar-degas-lorchestre-de-lopera-the-orchestra-of-the-opera
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/edgar-degas-lorchestre-de-lopera-the-orchestra-of-the-opera
+colorfulness: 1,
 color_diversity: 1,
 brightness: 1,
 human_present?: 1,
@@ -454,10 +418,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/edouard-manet-luncheon-on-the-grass-le-dejeuner-sur-lherbe
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/edouard-manet-luncheon-on-the-grass-le-dejeuner-sur-lherbe
+colorfulness: 2,
 color_diversity: 1,
 brightness: 1,
 human_present?: 1,
@@ -466,10 +429,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/edouard-manet-the-execution-of-emperor-maximilian-of-mexico-june-19-1867
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/edouard-manet-the-execution-of-emperor-maximilian-of-mexico-june-19-1867
+colorfulness: 2,
 color_diversity: 2,
 brightness: 1,
 human_present?: 1,
@@ -478,10 +440,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 2,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/edouard-manet-olympia
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/edouard-manet-olympia
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -490,10 +451,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/claude-monet-the-houses-of-parliament-sunset
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/claude-monet-the-houses-of-parliament-sunset
+colorfulness: 2,
 color_diversity: 2,
 brightness: 1,
 human_present?: 0,
@@ -502,10 +462,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 2]
-
-https://www.artsy.net/artwork/claude-monet-the-water-lily-pond
-[colorfulness: 2,
+landscape_or_portrait: 2
+url: https://www.artsy.net/artwork/claude-monet-the-water-lily-pond
+colorfulness: 2,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -514,10 +473,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 2]
-
-https://www.artsy.net/artwork/claude-monet-water-lilies-6
-[colorfulness: 2,
+landscape_or_portrait: 2
+url: https://www.artsy.net/artwork/claude-monet-water-lilies-6
+colorfulness: 2,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -526,10 +484,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 2]
-
-https://www.artsy.net/artwork/claude-monet-rouen-cathedral-west-facade
-[colorfulness: 2,
+landscape_or_portrait: 2
+url: https://www.artsy.net/artwork/claude-monet-rouen-cathedral-west-facade
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 0,
@@ -538,10 +495,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/claude-monet-lavacourt-under-snow
-[colorfulness: 1,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/claude-monet-lavacourt-under-snow
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -550,10 +506,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/camille-pissarro-charing-cross-bridge-london
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/camille-pissarro-charing-cross-bridge-london
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 0,
@@ -562,10 +517,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/camille-pissarro-place-du-carrousel-paris
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/camille-pissarro-place-du-carrousel-paris
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 1,
@@ -574,10 +528,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 2]
-
-https://www.artsy.net/artwork/camille-pissarro-snowy-landscape-at-south-norwood
-[colorfulness: 1,
+landscape_or_portrait: 2
+url: https://www.artsy.net/artwork/camille-pissarro-snowy-landscape-at-south-norwood
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -586,10 +539,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 2]
-
-https://www.artsy.net/artwork/camille-pissarro-boulevard-des-italiens-morning-sunlight
-[colorfulness: 2,
+landscape_or_portrait: 2
+url: https://www.artsy.net/artwork/camille-pissarro-boulevard-des-italiens-morning-sunlight
+colorfulness: 2,
 color_diversity: 2,
 brightness: 1,
 human_present?: 1,
@@ -598,10 +550,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 2]
-
-https://www.artsy.net/artwork/alfred-sisley-saint-mammes-morning
-[colorfulness: 2,
+landscape_or_portrait: 2
+url: https://www.artsy.net/artwork/alfred-sisley-saint-mammes-morning
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 0,
@@ -610,10 +561,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/alfred-sisley-the-bridge-at-villeneuve-la-garenne
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/alfred-sisley-the-bridge-at-villeneuve-la-garenne
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 1,
@@ -622,10 +572,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/alfred-sisley-meadow
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/alfred-sisley-meadow
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -634,10 +583,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/alfred-sisley-the-banks-of-the-oise
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/alfred-sisley-the-banks-of-the-oise
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -646,10 +594,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 2]
-
-https://www.artsy.net/artwork/berthe-morisot-woman-at-her-toilette
-[colorfulness: 0,
+landscape_or_portrait: 2
+url: https://www.artsy.net/artwork/berthe-morisot-woman-at-her-toilette
+colorfulness: 0,
 color_diversity: 0,
 brightness: 1,
 human_present?: 1,
@@ -658,10 +605,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/berthe-morisot-girl-in-a-boat-with-geese
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/berthe-morisot-girl-in-a-boat-with-geese
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -670,10 +616,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/childe-hassam-oyster-sloop-cos-cob
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/childe-hassam-oyster-sloop-cos-cob
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 1,
@@ -682,10 +627,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/childe-hassam-washington-arch-spring
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/childe-hassam-washington-arch-spring
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 1,
@@ -694,10 +638,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 1]
-
-https://www.artsy.net/artwork/mary-cassatt-little-girl-in-a-blue-armchair-1
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: https://www.artsy.net/artwork/mary-cassatt-little-girl-in-a-blue-armchair-1
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -706,10 +649,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/gustave-caillebotte-paris-street-rainy-day
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/gustave-caillebotte-paris-street-rainy-day
+colorfulness: 2,
 color_diversity: 1,
 brightness: 1,
 human_present?: 1,
@@ -718,10 +660,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/gustave-caillebotte-skiffs
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/gustave-caillebotte-skiffs
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -730,10 +671,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/jean-baptiste-armand-guillaumin-landscape
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/jean-baptiste-armand-guillaumin-landscape
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 1,
@@ -742,10 +682,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/jean-baptiste-armand-guillaumin-the-bridge-of-louis-philippe
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/jean-baptiste-armand-guillaumin-the-bridge-of-louis-philippe
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -754,10 +693,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/jean-baptiste-armand-guillaumin-breton-landscape-vaches-en-repos
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/jean-baptiste-armand-guillaumin-breton-landscape-vaches-en-repos
+colorfulness: 2,
 color_diversity: 2,
 brightness: 1,
 human_present?: 0,
@@ -766,10 +704,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/jean-baptiste-armand-guillaumin-en-hollande
-[colorfulness: 0,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/jean-baptiste-armand-guillaumin-en-hollande
+colorfulness: 0,
 color_diversity: 0,
 brightness: 1,
 human_present?: 1,
@@ -778,10 +715,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 1,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/eugene-boudin-washerwomen-on-the-beach-of-etretat
-[colorfulness: 0,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/eugene-boudin-washerwomen-on-the-beach-of-etretat
+colorfulness: 0,
 color_diversity: 1,
 brightness: 1,
 human_present?: 1,
@@ -790,10 +726,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/eugene-boudin-women-on-the-beach-at-berck
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/eugene-boudin-women-on-the-beach-at-berck
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -802,10 +737,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
-
-https://www.artsy.net/artwork/walter-gay-a-picture-gallery
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://www.artsy.net/artwork/walter-gay-a-picture-gallery
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 0,
@@ -814,12 +748,11 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 0,
-landscape_or_portrait: 0]
+landscape_or_portrait: 0
 
 ------------------------------------NEITHER (scrape from google.com)
-
-https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a0b13a34ac62bb75cc.jpg
-[colorfulness: 1,
+url: https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a0b13a34ac62bb75cc.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -828,10 +761,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://assets.entrepreneur.com/content/16x9/822/1410823428-amazingly-free-stock-websites.jpg
-[colorfulness: 0,
+landscape_or_portrait: 0
+url: https://assets.entrepreneur.com/content/16x9/822/1410823428-amazingly-free-stock-websites.jpg
+colorfulness: 0,
 color_diversity: 0,
 brightness: 1,
 human_present?: 1,
@@ -840,10 +772,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://orig05.deviantart.net/0c83/f/2013/131/b/8/stock_premade_background10_by_gwendolyn1_stock-d64wakh.jpg
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: http://orig05.deviantart.net/0c83/f/2013/131/b/8/stock_premade_background10_by_gwendolyn1_stock-d64wakh.jpg
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 0,
@@ -852,10 +783,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 1]
-
-http://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2016/00/09/103455746-GettyImages-512791400.600x400.jpg?v=1457542554
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: http://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2016/00/09/103455746-GettyImages-512791400.600x400.jpg?v=1457542554
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -864,10 +794,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://netdna.webdesignerdepot.com/uploads/2008/12/what-is-stock-photo.jpg
-[colorfulness: 0,
+landscape_or_portrait: 0
+url: http://netdna.webdesignerdepot.com/uploads/2008/12/what-is-stock-photo.jpg
+colorfulness: 0,
 color_diversity: 0,
 brightness: 1,
 human_present?: 1,
@@ -876,10 +805,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://2zpt4dwruy922flhqyznip50-wpengine.netdna-ssl.com/wp-content/uploads/2014/12/lock-and-stock-photos.jpg
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://2zpt4dwruy922flhqyznip50-wpengine.netdna-ssl.com/wp-content/uploads/2014/12/lock-and-stock-photos.jpg
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -888,10 +816,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://s-media-cache-ak0.pinimg.com/originals/70/83/6a/73836ad5ed74e486238b0d5ea0fa2607.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://s-media-cache-ak0.pinimg.com/originals/70/83/6a/73836ad5ed74e486238b0d5ea0fa2607.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -900,10 +827,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://static.pexels.com/photos/8264/pexels-photo.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://static.pexels.com/photos/8264/pexels-photo.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -912,10 +838,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://www.freedigitalphotos.net/images/img/homepage/039504.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: http://www.freedigitalphotos.net/images/img/homepage/039504.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -924,10 +849,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://stockfresh.com/files/k/kamchatka/m/46/744446_stock-photo-river-on-sunset.jpg
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: http://stockfresh.com/files/k/kamchatka/m/46/744446_stock-photo-river-on-sunset.jpg
+colorfulness: 2,
 color_diversity: 2,
 brightness: 1,
 human_present?: 0,
@@ -936,10 +860,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 1]
-
-https://static.pexels.com/photos/10651/photo-1402821596592-e2c18b78144f.jpeg
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: https://static.pexels.com/photos/10651/photo-1402821596592-e2c18b78144f.jpeg
+colorfulness: 2,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -948,10 +871,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://p.bigstockphoto.com/lG8py5ozQFGFFfrVeRmV_81988295.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://p.bigstockphoto.com/lG8py5ozQFGFFfrVeRmV_81988295.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -960,10 +882,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://www.pardot.com/wp-content/uploads/2015/00/iStock-Unfinished-Business-6.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: http://www.pardot.com/wp-content/uploads/2015/00/iStock-Unfinished-Business-6.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -972,10 +893,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://g.foolcdn.com/editorial/images/419172/stock-going-up-analyst-supporting_large.jpg
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://g.foolcdn.com/editorial/images/419172/stock-going-up-analyst-supporting_large.jpg
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -984,10 +904,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://assets.entrepreneur.com/static/1425478689-vince-vaughn-appearing-free-cheesy-stock-images-you-can-download-getty-2.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://assets.entrepreneur.com/static/1425478689-vince-vaughn-appearing-free-cheesy-stock-images-you-can-download-getty-2.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -996,10 +915,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2009/00/car.jpg
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2009/00/car.jpg
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -1008,10 +926,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 1]
-
-http://wwwimages.adobe.com/content/dam/acom/en/products/creativecloud/stock/cc2016/images/stock-sell-404x280.jpg
-[colorfulness: 2,
+landscape_or_portrait: 1
+url: http://wwwimages.adobe.com/content/dam/acom/en/products/creativecloud/stock/cc2016/images/stock-sell-404x280.jpg
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -1020,10 +937,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://upload.wikimedia.org/wikipedia/commons/d/d7/Philippine-stock-market-board.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://upload.wikimedia.org/wikipedia/commons/d/d7/Philippine-stock-market-board.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -1032,10 +948,9 @@ day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://static.pexels.com/photos/46710/pexels-photo-46710.jpeg
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://static.pexels.com/photos/46710/pexels-photo-46710.jpeg
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -1044,10 +959,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://www.rgbstock.com/cache1vuXv2/css/rgbstock/images/vp_2010/lighthouse.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: http://www.rgbstock.com/cache1vuXv2/css/rgbstock/images/vp_2010/lighthouse.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -1056,10 +970,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://thumbs.dreamstime.com/t/white-lion-moon-light-62070026.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://thumbs.dreamstime.com/t/white-lion-moon-light-62070026.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -1068,10 +981,9 @@ day_or_night: 1,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://static.pexels.com/photos/29724/pexels-photo-29724.jpg
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://static.pexels.com/photos/29724/pexels-photo-29724.jpg
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -1079,11 +991,10 @@ animal_present?: 0,
 day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
-paint_or_pen/pencil?: 12},
-landscape_or_portrait: 0]
-
-https://assets.entrepreneur.com/static/1425479420-vince-vaughn-appearing-free-cheesy-stock-images-you-can-download-getty-3.jpg
-[colorfulness: 1,
+paint_or_pen/pencil?: 2,
+landscape_or_portrait: 0
+url: https://assets.entrepreneur.com/static/1425479420-vince-vaughn-appearing-free-cheesy-stock-images-you-can-download-getty-3.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -1092,10 +1003,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://static.pexels.com/photos/17727/pexels-photo.jpg
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://static.pexels.com/photos/17727/pexels-photo.jpg
+colorfulness: 2,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -1104,10 +1014,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://www.pardot.com/wp-content/uploads/2015/00/iStock-Unfinished-Business-5.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: http://www.pardot.com/wp-content/uploads/2015/00/iStock-Unfinished-Business-5.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -1115,11 +1024,10 @@ animal_present?: 0,
 day_or_night: 2,
 action(how much is going on): 1,
 seriousness/intensity: 0,
-paint_or_pen/pencil?: 12},
-landscape_or_portrait: 0]
-
-http://orig12.deviantart.net/7285/f/2007/206/b/e/country_stock_2_by_killxthexscenexstock.jpg
-[colorfulness: 2,
+paint_or_pen/pencil?: 2,
+landscape_or_portrait: 0
+url: http://orig12.deviantart.net/7285/f/2007/206/b/e/country_stock_2_by_killxthexscenexstock.jpg
+colorfulness: 2,
 color_diversity: 2,
 brightness: 2,
 human_present?: 0,
@@ -1128,10 +1036,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://l.rgbimg.com/cache1oM2ux/users/j/jo/johnnyberg/600/mzAQcba.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: http://l.rgbimg.com/cache1oM2ux/users/j/jo/johnnyberg/600/mzAQcba.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -1140,10 +1047,9 @@ day_or_night: 1,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://upload.wikimedia.org/wikipedia/commons/0/05/C_Stock_at_Ladbroke_Grove_1.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://upload.wikimedia.org/wikipedia/commons/0/05/C_Stock_at_Ladbroke_Grove_1.jpg
+colorfulness: 1,
 color_diversity: 2,
 brightness: 2,
 human_present?: 0,
@@ -1152,10 +1058,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://img05.deviantart.net/e062/i/2012/037/7/0/sheep_stock_06_by_jaded_night_stock-d5mxug7.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: http://img05.deviantart.net/e062/i/2012/037/7/0/sheep_stock_06_by_jaded_night_stock-d5mxug7.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -1164,10 +1069,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://static.pexels.com/photos/27714/pexels-photo-27714.jpg
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: https://static.pexels.com/photos/27714/pexels-photo-27714.jpg
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -1176,10 +1080,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://img09.deviantart.net/9701/i/2008/250/f/e/sky_by_chocolateir_stock.jpg
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: http://img09.deviantart.net/9701/i/2008/250/f/e/sky_by_chocolateir_stock.jpg
+colorfulness: 2,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -1188,10 +1091,9 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-https://strategylab.ca/wp-content/uploads/2016/02/thumbs-up-if-you-like-fun-stratlab-stock-photos-downloadable.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: https://strategylab.ca/wp-content/uploads/2016/02/thumbs-up-if-you-like-fun-stratlab-stock-photos-downloadable.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 1,
@@ -1200,10 +1102,9 @@ day_or_night: 2,
 action(how much is going on): 0,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://www.stockvault.net/data/2016/02/19/184589/thumb16.jpg
-[colorfulness: 1,
+landscape_or_portrait: 0
+url: http://www.stockvault.net/data/2016/02/19/184589/thumb16.jpg
+colorfulness: 1,
 color_diversity: 1,
 brightness: 2,
 human_present?: 0,
@@ -1212,10 +1113,9 @@ day_or_night: 0,
 action(how much is going on): 0,
 seriousness/intensity: 0,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
-
-http://www.investors.com/wp-content/uploads/2017/02/wETF01_jacks_020717_adobe.jpg
-[colorfulness: 2,
+landscape_or_portrait: 0
+url: http://www.investors.com/wp-content/uploads/2017/02/wETF01_jacks_020717_adobe.jpg
+colorfulness: 2,
 color_diversity: 1,
 brightness: 1,
 human_present?: 0,
@@ -1224,4 +1124,4 @@ day_or_night: 0,
 action(how much is going on): 1,
 seriousness/intensity: 1,
 paint_or_pen/pencil?: 2,
-landscape_or_portrait: 0]
+landscape_or_portrait: 0
