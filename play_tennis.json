@@ -1,0 +1,100 @@
+[
+ {
+   "Outlook": " Sunny",
+   "Temperature": " Hot",
+   "Humidity": " High",
+   "Wind": " Weak",
+   "Playtennis": " No"
+ },
+ {
+   "Outlook": " Sunny",
+   "Temperature": " Hot",
+   "Humidity": " High",
+   "Wind": " Strong",
+   "Playtennis": " No"
+ },
+ {
+   "Outlook": " Overcast",
+   "Temperature": " Hot",
+   "Humidity": " High",
+   "Wind": " Weak",
+   "Playtennis": " Yes"
+ },
+ {
+   "Outlook": " Rain",
+   "Temperature": " Mild",
+   "Humidity": " High",
+   "Wind": " Weak",
+   "Playtennis": " Yes"
+ },
+ {
+   "Outlook": " Rain",
+   "Temperature": " Cool",
+   "Humidity": " Normal",
+   "Wind": " Weak",
+   "Playtennis": " Yes"
+ },
+ {
+   "Outlook": " Rain",
+   "Temperature": " Cool",
+   "Humidity": " Normal",
+   "Wind": " Strong",
+   "Playtennis": " No"
+ },
+ {
+   "Outlook": " Overcast",
+   "Temperature": " Cool",
+   "Humidity": " Normal",
+   "Wind": " Strong",
+   "Playtennis": " Yes"
+ },
+ {
+   "Outlook": " Sunny",
+   "Temperature": " Mild",
+   "Humidity": " High",
+   "Wind": " Weak",
+   "Playtennis": " No"
+ },
+ {
+   "Outlook": " Sunny",
+   "Temperature": " Cool",
+   "Humidity": " Normal",
+   "Wind": " Weak",
+   "Playtennis": " Yes"
+ },
+ {
+   "Outlook": " Rain",
+   "Temperature": " Mild",
+   "Humidity": " Normal",
+   "Wind": " Weak",
+   "Playtennis": " Yes"
+ },
+ {
+   "Outlook": " Sunny",
+   "Temperature": " Mild",
+   "Humidity": " Normal",
+   "Wind": " Strong",
+   "Playtennis": " Yes"
+ },
+ {
+   "Outlook": " Overcast",
+   "Temperature": " Mild",
+   "Humidity": " High",
+   "Wind": " Strong",
+   "Playtennis": " Yes"
+ },
+ {
+   "Outlook": " Overcast",
+   "Temperature": " Hot",
+   "Humidity": " Normal",
+   "Wind": " Weak",
+   "Playtennis": " Yes"
+ },
+ {
+   "Outlook": " Rain",
+   "Temperature": " Mild",
+   "Humidity": " High",
+   "Wind": " Strong",
+   "Playtennis": " No"
+ }
+]
