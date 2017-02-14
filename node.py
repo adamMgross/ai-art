@@ -109,21 +109,39 @@ class Tree(object):
         node_to_prune = None
         best_error = self.eval_set(self.validation)
 
+        print('Validation error without pruning: %f\n' % best_error)
+
+        # count = 0
         for node in self.pruning_candidates:
+            # print node.display()
             node.prune()
             error = self.eval_set(self.validation)
+            # print('Validation error with pruning: %f' % error)
+            # count += 1
             node.unprune()
 
-            if error < best_error or abs(error - best_error) < 0.00001:
+            # if error < best_error or abs(error - best_error) < 0.00001:
+            if error < best_error:
                 node_to_prune = node
                 best_error = error
+
+            else:
+                self.pruning_candidates.remove(node)
 
         # should stop pruning
         if node_to_prune is None:
             return -1
 
         node_to_prune.prune()
+
+        # print('pruning: %s' % node_to_prune.display())
+        # self.display('test_paths_with_prune')
+
         self.nIterations += 1
+
+        #raw_input('enter...')
+
+        return 0
 
     def eval_set(self,set):
         error = 0
@@ -143,6 +161,27 @@ class Tree(object):
 
         errors = Errors(training_error, validation_error, testing_error)
         return Results(errors, self.nNodes, self.nIterations)
+
+    # creates a list of all possible paths to leaf nodes in the tree
+    # and the resulting label
+    def display(self,fname=None):
+        paths = []
+
+        count = 0
+        for leaf in self.leaves:
+            string = 'Path %d: \nroot\n' % count
+            for attr, value in leaf.info.path.items():
+                string += ' --> (%s\t: %s)\n' % (str(attr), str(value))
+            string += 'Label: %s\n\n' % str(leaf.vote)
+            paths.append(string)
+            count += 1
+
+        if not fname is None:
+            with open(fname, 'wb') as f:
+                f.writelines(paths)
+
+        return paths
+
 
 class Node(object):
     """docstring for Node."""
@@ -182,7 +221,7 @@ class Node(object):
         # instantiated when self.expand() is called
         self.children_are_leaves = None
 
-        print('Created node: %s' % self.display())
+        # print('Created node: %s' % self.display())
 
     def info_gain(self,attr):
         S_cardinality = len(self.info.S)
@@ -244,8 +283,8 @@ class Node(object):
         # val not seen as value for self.attr in any training instance
         # in this case we "guess" --- choose self.vote
         except KeyError:
-            print('unpreviously seen value %s for attribute %s' %
-                    (val, self.attr))
+            # print('unpreviously seen value %s for attribute %s' %
+            #        (val, self.attr))
             return self.vote
 
     def expand(self):
@@ -314,7 +353,7 @@ class Node(object):
             for value, node in self.children.items():
                 self.info.tree.expand_queue.put(node)
 
-            print('\nExpanded node: %s\n' % self.display())
+            # print('\nExpanded node: %s\n' % self.display())
 
             # successfully expanded
             return 0
@@ -325,6 +364,16 @@ class Node(object):
     def prune(self):
         self.isLeaf = True
         self.info.tree.nNodes -= 1
+
+        # have to now add node to list of leaves
+        self.info.tree.leaves.append(self)
+
+        # have to remove each child from list of leaves
+        for child in self.children.values():
+            try:
+                self.info.tree.leaves.remove(child)
+            except ValueError:
+                pass
 
         if not self.parent is None:
             self.parent.children_are_leaves[self.prev_value] = True
@@ -338,6 +387,16 @@ class Node(object):
     def unprune(self):
         self.isLeaf = False
         self.info.tree.nNodes += 1
+
+        # no longer a leaf node
+        try:
+            self.info.tree.leaves.remove(self)
+        except ValueError:
+            pass
+
+        # have to add each child from list of leaves
+        for child in self.children.values():
+            self.info.tree.leaves.append(child)
 
         if not self.parent is None:
             self.parent.children_are_leaves[self.prev_value] = False

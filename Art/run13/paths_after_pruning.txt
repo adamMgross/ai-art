@@ -1,0 +1,360 @@
+Path 0: 
+root
+ --> (paint_or_pen/pencil?	: 1)
+Label: surrealist
+
+Path 1: 
+root
+ --> (paint_or_pen/pencil?	: 2)
+Label: neither
+
+Path 2: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 0)
+Label: None
+
+Path 3: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 1)
+Label: impressionist
+
+Path 4: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 0)
+Label: None
+
+Path 5: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 2)
+ --> (brightness	: 0)
+Label: surrealist
+
+Path 6: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 2)
+ --> (brightness	: 2)
+Label: surrealist
+
+Path 7: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 1)
+ --> (human_present?	: 0)
+Label: surrealist
+
+Path 8: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 1)
+Label: impressionist
+
+Path 9: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 1)
+Label: impressionist
+
+Path 10: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 0)
+Label: None
+
+Path 11: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 2)
+ --> (brightness	: 1)
+ --> (colorfulness	: 1)
+Label: surrealist
+
+Path 12: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 2)
+ --> (brightness	: 1)
+ --> (colorfulness	: 0)
+Label: None
+
+Path 13: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 1)
+ --> (human_present?	: 1)
+ --> (animal_present?	: 1)
+Label: surrealist
+
+Path 14: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 1)
+Label: surrealist
+
+Path 15: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 0)
+Label: None
+
+Path 16: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 2)
+ --> (human_present?	: 0)
+Label: surrealist
+
+Path 17: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 1)
+ --> (human_present?	: 1)
+ --> (animal_present?	: 0)
+ --> (color_diversity	: 1)
+Label: impressionist
+
+Path 18: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 1)
+ --> (human_present?	: 1)
+ --> (animal_present?	: 0)
+ --> (color_diversity	: 0)
+Label: impressionist
+
+Path 19: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 1)
+ --> (human_present?	: 1)
+ --> (animal_present?	: 0)
+ --> (color_diversity	: 2)
+Label: surrealist
+
+Path 20: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 1)
+Label: None
+
+Path 21: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 0)
+Label: impressionist
+
+Path 22: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 2)
+ --> (human_present?	: 1)
+ --> (landscape_or_portrait	: 1)
+Label: impressionist
+
+Path 23: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 2)
+ --> (human_present?	: 1)
+ --> (landscape_or_portrait	: 2)
+Label: impressionist
+
+Path 24: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 2)
+ --> (human_present?	: 1)
+Label: surrealist
+
+Path 25: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 2)
+ --> (human_present?	: 1)
+ --> (landscape_or_portrait	: 0)
+ --> (colorfulness	: 1)
+Label: None
+
+Path 26: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 2)
+ --> (human_present?	: 1)
+ --> (landscape_or_portrait	: 0)
+ --> (colorfulness	: 0)
+Label: None
+
+Path 27: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 2)
+ --> (human_present?	: 1)
+ --> (landscape_or_portrait	: 0)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 1)
+Label: None
+
+Path 28: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 2)
+ --> (human_present?	: 1)
+ --> (landscape_or_portrait	: 0)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 2)
+Label: None
+
+Path 29: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 2)
+ --> (human_present?	: 1)
+ --> (landscape_or_portrait	: 0)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 0)
+ --> (animal_present?	: 1)
+Label: None
+
+Path 30: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 2)
+ --> (human_present?	: 1)
+ --> (landscape_or_portrait	: 0)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 0)
+ --> (animal_present?	: 0)
+ --> (action(how much is going on)	: 1)
+Label: impressionist
+
+Path 31: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (color_diversity	: 2)
+ --> (brightness	: 2)
+ --> (human_present?	: 1)
+ --> (landscape_or_portrait	: 0)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 0)
+ --> (animal_present?	: 0)
+ --> (action(how much is going on)	: 0)
+Label: None
+
+Path 32: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 2)
+ --> (brightness	: 1)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 1)
+Label: None
+
+Path 33: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 2)
+ --> (brightness	: 1)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 0)
+Label: impressionist
+
+Path 34: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 2)
+ --> (brightness	: 1)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 2)
+Label: surrealist
+
+Path 35: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 2)
+ --> (human_present?	: 0)
+ --> (color_diversity	: 1)
+Label: surrealist
+
+Path 36: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 2)
+ --> (human_present?	: 0)
+ --> (color_diversity	: 0)
+Label: None
+
+Path 37: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 2)
+ --> (day_or_night	: 2)
+ --> (human_present?	: 0)
+ --> (color_diversity	: 2)
+Label: impressionist
+

@@ -1,0 +1,144 @@
+Path 0: 
+root
+ --> (paint_or_pen/pencil?	: 1)
+Label: surrealist
+
+Path 1: 
+root
+ --> (paint_or_pen/pencil?	: 2)
+Label: neither
+
+Path 2: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 2)
+Label: surrealist
+
+Path 3: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 0)
+Label: None
+
+Path 4: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (landscape_or_portrait	: 0)
+Label: impressionist
+
+Path 5: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (landscape_or_portrait	: 2)
+Label: impressionist
+
+Path 6: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 1)
+ --> (human_present?	: 0)
+Label: surrealist
+
+Path 7: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 1)
+Label: impressionist
+
+Path 8: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (landscape_or_portrait	: 1)
+ --> (human_present?	: 1)
+Label: impressionist
+
+Path 9: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 1)
+ --> (human_present?	: 1)
+ --> (animal_present?	: 1)
+Label: surrealist
+
+Path 10: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 1)
+ --> (human_present?	: 1)
+ --> (animal_present?	: 0)
+Label: impressionist
+
+Path 11: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 1)
+Label: surrealist
+
+Path 12: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 0)
+Label: None
+
+Path 13: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (landscape_or_portrait	: 1)
+ --> (human_present?	: 0)
+ --> (color_diversity	: 1)
+Label: impressionist
+
+Path 14: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (landscape_or_portrait	: 1)
+ --> (human_present?	: 0)
+ --> (color_diversity	: 0)
+Label: None
+
+Path 15: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 0)
+ --> (landscape_or_portrait	: 1)
+ --> (human_present?	: 0)
+ --> (color_diversity	: 2)
+Label: surrealist
+
+Path 16: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 2)
+ --> (human_present?	: 1)
+Label: surrealist
+
+Path 17: 
+root
+ --> (paint_or_pen/pencil?	: 0)
+ --> (seriousness/intensity	: 1)
+ --> (brightness	: 2)
+ --> (animal_present?	: 0)
+ --> (colorfulness	: 2)
+ --> (human_present?	: 0)
+Label: impressionist
+

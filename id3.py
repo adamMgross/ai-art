@@ -37,7 +37,8 @@ def art():
         os.makedirs(directory)
 
     solve_without_pruning(training, testing, label, folder)
-    for i in range(1):
+    for i in range(20):
+        print i
         solve_with_pruning(training, testing, label, folder, i)
 
 def solve_without_pruning(training, testing, label, folder):
@@ -77,7 +78,7 @@ def solve_without_pruning(training, testing, label, folder):
     plt.legend(tuple(scatters),
            ('Training', 'Testing', 'nNodes (normalized)'),
            scatterpoints=1,
-           loc='upper left',
+           loc='upper right',
            ncol=3,
            fontsize=8)
 
@@ -88,7 +89,8 @@ def solve_without_pruning(training, testing, label, folder):
     fig.savefig('%s\\no_pruning_plot.png' % folder)
     plt.clf()
 
-    iterations = [[tr,te,nodes] for tr,te,nodes in zip(training_errors,
+    column_labels = ['training_error', 'testing_error', 'nNodes']
+    iterations = [column_labels] + [[tr,te,nodes] for tr,te,nodes in zip(training_errors,
             testing_errors, nNodes)]
 
     write2CSV(iterations,'%s\\no_pruning_data' % folder)
@@ -125,8 +127,7 @@ def solve_with_pruning(training, testing, label, folder, run):
 
         ret_code = tree.expand_tree()
 
-    for leaf in tree.leaves:
-        print leaf.info.path
+    tree.display(directory + '\\paths_before_pruning.txt')
 
     # prune tree iteratively
     ret_code = tree.prune()
@@ -143,6 +144,8 @@ def solve_with_pruning(training, testing, label, folder, run):
 
         ret_code = tree.prune()
 
+    tree.display(directory + '\\paths_after_pruning.txt')
+
     nNodes_normalized = normalize(np.array(nNodes))
     ys.append(nNodes_normalized)
 
@@ -155,8 +158,8 @@ def solve_with_pruning(training, testing, label, folder, run):
     plt.legend(tuple(scatters),
            ('Training', 'Validation', 'Testing', 'nNodes (normalized)'),
            scatterpoints=1,
-           loc='lower left',
-           ncol=3,
+           loc='upper right',
+           ncol=4,
            fontsize=8)
 
     plt.title('%s Dataset: Errors and nNodes' % folder)
@@ -166,7 +169,8 @@ def solve_with_pruning(training, testing, label, folder, run):
     fig.savefig('%s\\with_pruning_plot.png' % directory)
     plt.clf()
 
-    iterations = [[tr,v,te,nodes] for tr,v,te,nodes in zip(training_errors,
+    column_labels = ['training_error', 'validation_error', 'testing_error', 'nNodes']
+    iterations = [column_labels] + [[tr,v,te,nodes] for tr,v,te,nodes in zip(training_errors,
             validation_errors, testing_errors, nNodes)]
 
     write2CSV(iterations,'%s\\with_pruning_data' % directory)
