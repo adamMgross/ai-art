@@ -1,0 +1,29 @@
+Path 0: 
+root
+ --> (Outlook	:  Overcast)
+Label:  Yes
+
+Path 1: 
+root
+ --> (Outlook	:  Rain)
+ --> (Wind	:  Strong)
+Label:  No
+
+Path 2: 
+root
+ --> (Outlook	:  Rain)
+ --> (Wind	:  Weak)
+Label:  Yes
+
+Path 3: 
+root
+ --> (Outlook	:  Sunny)
+ --> (Humidity	:  High)
+Label:  No
+
+Path 4: 
+root
+ --> (Outlook	:  Sunny)
+ --> (Humidity	:  Normal)
+Label:  Yes
+

@@ -11,8 +11,8 @@ from node import Tree
 test_ratio = 0.2
 
 def main():
-    #tennis()
-    art()
+    tennis()
+    #art()
 
 def tennis():
     training, testing = JSON_to_datasets('play_tennis.json')
@@ -65,6 +65,8 @@ def solve_without_pruning(training, testing, label, folder):
         nNodes.append(res.nNodes)
 
         ret_code = tree.expand_tree()
+
+    tree.display(folder + '\\paths.txt')
 
     nNodes_normalized = normalize(np.array(nNodes))
     ys.append(nNodes_normalized)
