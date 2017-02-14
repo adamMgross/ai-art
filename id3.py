@@ -10,9 +10,12 @@ from node import Tree
 # proportion of total instances to be used for testing
 test_ratio = 0.2
 
+# number of cross-validation iterations for Art dataset
+nCrossVal_iterations = 20
+
 def main():
     tennis()
-    #art()
+    art()
 
 def tennis():
     training, testing = JSON_to_datasets('play_tennis.json')
@@ -37,8 +40,8 @@ def art():
         os.makedirs(directory)
 
     solve_without_pruning(training, testing, label, folder)
-    for i in range(20):
-        print i
+    for i in range(nCrossVal_iterations):
+        # print i
         solve_with_pruning(training, testing, label, folder, i)
 
 def solve_without_pruning(training, testing, label, folder):

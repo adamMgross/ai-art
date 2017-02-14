@@ -109,7 +109,7 @@ class Tree(object):
         node_to_prune = None
         best_error = self.eval_set(self.validation)
 
-        print('Validation error without pruning: %f\n' % best_error)
+        # print('Validation error without pruning: %f\n' % best_error)
 
         # count = 0
         for node in self.pruning_candidates:
