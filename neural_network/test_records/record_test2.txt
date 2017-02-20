@@ -1,0 +1,160 @@
+CPUs: 1,
+Memory: 0.5GB,
+Processor: Intel Xeon,
+Clock_Speed: up to 3.3 GHz
+
+=====================================
+CONDUCTING TRIAL
+#HIDDEN_LAYERS=0
+#UNITS_IN_HIDDEN_LAYER=30
+MINI_BATCH_SIZE=10
+LEARNING_RATE=3.0
+Epoch 0: 6005 / 10000
+Epoch 1: 6341 / 10000
+Epoch 2: 6378 / 10000
+Epoch 3: 6406 / 10000
+Epoch 4: 7145 / 10000
+Epoch 5: 7258 / 10000
+Epoch 6: 7273 / 10000
+Epoch 7: 7272 / 10000
+Epoch 8: 7266 / 10000
+Epoch 9: 7274 / 10000
+Epoch 10: 7271 / 10000
+Epoch 11: 7255 / 10000
+Epoch 12: 7290 / 10000
+Epoch 13: 7285 / 10000
+Epoch 14: 7277 / 10000
+Epoch 15: 7295 / 10000
+Epoch 16: 7220 / 10000
+Epoch 17: 7276 / 10000
+Epoch 18: 7290 / 10000
+Epoch 19: 7352 / 10000
+Epoch 20: 8389 / 10000
+Epoch 21: 8390 / 10000
+Epoch 22: 8385 / 10000
+Epoch 23: 8390 / 10000
+Epoch 24: 8397 / 10000
+Epoch 25: 8394 / 10000
+Epoch 26: 8399 / 10000
+Epoch 27: 8399 / 10000
+Epoch 28: 8400 / 10000
+Epoch 29: 8399 / 10000
+ELAPSED TIME: 90.3564331532 seconds
+=====================================
+=====================================
+CONDUCTING TRIAL
+#HIDDEN_LAYERS=1
+#UNITS_IN_HIDDEN_LAYER=10
+MINI_BATCH_SIZE=10
+LEARNING_RATE=3.0
+Epoch 0: 8658 / 10000
+Epoch 1: 8764 / 10000
+Epoch 2: 8853 / 10000
+Epoch 3: 8855 / 10000
+Epoch 4: 8908 / 10000
+Epoch 5: 8878 / 10000
+Epoch 6: 8945 / 10000
+Epoch 7: 8924 / 10000
+Epoch 8: 8976 / 10000
+Epoch 9: 8950 / 10000
+Epoch 10: 9001 / 10000
+Epoch 11: 8941 / 10000
+Epoch 12: 9008 / 10000
+Epoch 13: 8999 / 10000
+Epoch 14: 9032 / 10000
+Epoch 15: 9034 / 10000
+Epoch 16: 8981 / 10000
+Epoch 17: 9006 / 10000
+Epoch 18: 9008 / 10000
+Epoch 19: 9036 / 10000
+Epoch 20: 8949 / 10000
+Epoch 21: 9050 / 10000
+Epoch 22: 9047 / 10000
+Epoch 23: 9062 / 10000
+Epoch 24: 9092 / 10000
+Epoch 25: 9071 / 10000
+Epoch 26: 9056 / 10000
+Epoch 27: 9036 / 10000
+Epoch 28: 9012 / 10000
+Epoch 29: 9016 / 10000
+ELAPSED TIME: 127.591414928 seconds
+=====================================
+=====================================
+CONDUCTING TRIAL
+#HIDDEN_LAYERS=1
+#UNITS_IN_HIDDEN_LAYER=30
+MINI_BATCH_SIZE=10
+LEARNING_RATE=0.01
+Epoch 0: 2815 / 10000
+Epoch 1: 3139 / 10000
+Epoch 2: 3315 / 10000
+Epoch 3: 3535 / 10000
+Epoch 4: 3769 / 10000
+Epoch 5: 4095 / 10000
+Epoch 6: 4377 / 10000
+Epoch 7: 4581 / 10000
+Epoch 8: 4799 / 10000
+Epoch 9: 4977 / 10000
+Epoch 10: 5179 / 10000
+Epoch 11: 5351 / 10000
+Epoch 12: 5534 / 10000
+Epoch 13: 5657 / 10000
+Epoch 14: 5792 / 10000
+Epoch 15: 5892 / 10000
+Epoch 16: 5985 / 10000
+Epoch 17: 6056 / 10000
+Epoch 18: 6123 / 10000
+Epoch 19: 6202 / 10000
+Epoch 20: 6264 / 10000
+Epoch 21: 6319 / 10000
+Epoch 22: 6385 / 10000
+Epoch 23: 6430 / 10000
+Epoch 24: 6498 / 10000
+Epoch 25: 6548 / 10000
+Epoch 26: 6587 / 10000
+Epoch 27: 6637 / 10000
+Epoch 28: 6664 / 10000
+Epoch 29: 6710 / 10000
+ELAPSED TIME: 214.912328005 seconds
+=====================================
+=====================================
+CONDUCTING TRIAL
+#HIDDEN_LAYERS=1
+#UNITS_IN_HIDDEN_LAYER=30
+MINI_BATCH_SIZE=1
+LEARNING_RATE=3.0
+Epoch 0: 8189 / 10000
+Epoch 1: 7773 / 10000
+Epoch 2: 8506 / 10000
+Epoch 3: 8484 / 10000
+Epoch 4: 8120 / 10000
+Epoch 5: 8663 / 10000
+Epoch 6: 8280 / 10000
+Epoch 7: 8744 / 10000
+Epoch 8: 8833 / 10000
+Epoch 9: 8887 / 10000
+Epoch 10: 8817 / 10000
+Epoch 11: 8870 / 10000
+Epoch 12: 8658 / 10000
+Epoch 13: 8841 / 10000
+Epoch 14: 8785 / 10000
+Epoch 15: 8799 / 10000
+Epoch 16: 8893 / 10000
+Epoch 17: 8801 / 10000
+Epoch 18: 8915 / 10000
+Epoch 19: 8902 / 10000
+Epoch 20: 8906 / 10000
+Epoch 21: 8921 / 10000
+Epoch 22: 8836 / 10000
+Epoch 23: 8927 / 10000
+Epoch 24: 8989 / 10000
+Epoch 25: 8976 / 10000
+Epoch 26: 8978 / 10000
+Epoch 27: 8912 / 10000
+Epoch 28: 9008 / 10000
+Epoch 29: 8918 / 10000
+ELAPSED TIME: 308.79407382 seconds
+=====================================
+=====================================
+TOTAL DURATION: 741.654249907
+NUM_TRIALS: 4

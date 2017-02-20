@@ -88,28 +88,28 @@ def run(training_data, test_data):
     num_trials = 0
 
     # Run trial for each number of hidden layers
-    for hidden_layer_amt in hidden_layer_trials[:1]:
+    for hidden_layer_amt in hidden_layer_trials:
         variables = deepcopy(standard)
         variables['hidden_layers'] = hidden_layer_amt
         total_time += trial(variables, training_data, test_data)
         num_trials += 1
 
     # Run trial for each size of hidden layer
-    for hidden_layer_units_amt in hidden_layer_units_trials[:1]:
+    for hidden_layer_units_amt in hidden_layer_units_trials:
         variables = deepcopy(standard)
         variables['hidden_layer_units'] = hidden_layer_units_amt
         total_time += trial(variables, training_data, test_data)
         num_trials += 1
 
     # Run trial for each learning rate value
-    for learning_rate_amt in learning_rate_trials[:1]:
+    for learning_rate_amt in learning_rate_trials:
         variables = deepcopy(standard)
         variables['learning_rate'] = learning_rate_amt
         total_time += trial(variables, training_data, test_data)
         num_trials += 1
 
     # Run trial for each mini batch size
-    for mini_batch_size_amt in mini_batch_size_trials[:1]:
+    for mini_batch_size_amt in mini_batch_size_trials:
         variables = deepcopy(standard)
         variables['mini_batch_size'] = mini_batch_size_amt
         total_time += trial(variables, training_data, test_data)
