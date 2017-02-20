@@ -15,12 +15,10 @@ except:
     pass
 
 
-
-
 def sh_exec(s):
     call(s.split(' '))
 
-
+    
 def parse_page(url, genre):
     try:
         artist = url.split('/')[-1]
@@ -43,12 +41,13 @@ def parse_page(url, genre):
         print 'FAILED_URL: {}'.format(url)
         sleep(10)
 
-
+        
 def log(s):
     if DEBUG:
         for item in s:
             print s
 
+            
 def extract_img_src(img_tag):
     a = img_tag.split('https%3A%2F%2F')
     b = a[1]
@@ -56,6 +55,7 @@ def extract_img_src(img_tag):
     d = c[0]
     log([a, b, c, d])
     return 'https://' + unquote(img_tag.split('https%3A%2F%2F')[1].split('\"')[0])
+
 
 def download_art_by_genre():
     surreal_list = [url.strip() for url in open('./surrealist.txt', 'r').readlines()]
@@ -76,6 +76,9 @@ def download_art_by_genre():
         num_success, num_failed = parse_page(artist, 'impressionist')
         total_num_success += num_success
         total_num_failed += num_failed
+        sh_exec('clear')
+        print('Finished {}'.format(artist.split('/')[-1]))
+        print 'SUCCESS: {}\nFAILED: {}'.format(total_num_success, total_num_failed)
     print 'SUCCESS: {}\nFAILED: {}'.format(total_num_success, total_num_failed)
 
 
