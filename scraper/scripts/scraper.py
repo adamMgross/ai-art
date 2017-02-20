@@ -31,7 +31,7 @@ def parse_page(url, genre):
                 #sleep(0.5)
                 link = extract_img_src(str(src))
                 try:
-                    path = './imgs/{}/{}-{}.jpg'.format(genre, artist, count)
+                    path = '../imgs/{}/{}-{}.jpg'.format(genre, artist, count)
                     if not os.path.isfile(path):
                         sh_exec('wget {} -O {}'.format(link, path))
                         count += 1
