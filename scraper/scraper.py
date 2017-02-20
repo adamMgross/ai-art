@@ -76,6 +76,9 @@ def download_art_by_genre():
         num_success, num_failed = parse_page(artist, 'impressionist')
         total_num_success += num_success
         total_num_failed += num_failed
+        sh_exec('clear')
+        print('Finished {}'.format(artist.split('/')[-1]))
+        print 'SUCCESS: {}\nFAILED: {}'.format(total_num_success, total_num_failed)
     print 'SUCCESS: {}\nFAILED: {}'.format(total_num_success, total_num_failed)
 
 
