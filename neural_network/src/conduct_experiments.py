@@ -1,6 +1,8 @@
 import mnist_loader
 import network
 import sys
+from time import time
+
 
 sys.stdout = open('./record.txt', 'w')
 
@@ -20,6 +22,7 @@ def run(training_data, test_data):
     hidden_layer_units_trials = [10, 30, 50]
     learning_rate_trials = [0.01, 3, 30]
     mini_batch_size_trials = [1, 10, 100]
+    total_time = 0
     for hidden_layer_amt in hidden_layer_trials:
         for hidden_layer_units_amt in hidden_layer_units_trials:
             for learning_rate_amt in learning_rate_trials:
@@ -30,12 +33,18 @@ def run(training_data, test_data):
                         topology.append(hidden_layer_units_amt)
                     topology.append(10)
                     net = network.Network(topology)
+                    t1 = time()
                     net.SGD(training_data,
                             30,
                             mini_batch_size_amt,
                             learning_rate_amt,
                             test_data)
-    print '====================================='
+                    t2 = time()
+                    elapsed = (t2-t1)*1000.0
+                    print 'ELAPSED TIME: {}'.format(elapsed)
+                    total_time += elapsed
+                    print '====================================='
+    print 'TOTAL DURATION: {}'.format(total_time)
 
 training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
 run(training_data, test_data)
