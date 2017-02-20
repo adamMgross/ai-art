@@ -6,7 +6,7 @@ from subprocess import call
 import sys
 from time import sleep
 import os.path
-
+x=4
 DEBUG = False
 try:
     if sys.argv[1]:
@@ -18,7 +18,7 @@ except:
 def sh_exec(s):
     call(s.split(' '))
 
-    
+
 def parse_page(url, genre):
     try:
         artist = url.split('/')[-1]
@@ -41,13 +41,13 @@ def parse_page(url, genre):
         print 'FAILED_URL: {}'.format(url)
         sleep(10)
 
-        
+
 def log(s):
     if DEBUG:
         for item in s:
             print s
 
-            
+
 def extract_img_src(img_tag):
     a = img_tag.split('https%3A%2F%2F')
     b = a[1]
