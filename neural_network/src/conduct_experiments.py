@@ -1,7 +1,6 @@
 import mnist_loader
 import network
 import sys
-import x
 
 sys.stdout = open('./record.txt', 'w')
 
