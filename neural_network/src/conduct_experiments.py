@@ -30,7 +30,7 @@ except:
 sys.stdout = open('../test_records/{}.txt'.format(name), 'w')
 
 
-def log(variables):
+def log(variables, test_data_label):
     """ Prints to console the parameter information provided. Used for labeling
         test trials.
     """
@@ -40,12 +40,14 @@ def log(variables):
     print '#UNITS_IN_HIDDEN_LAYER={}'.format(variables['hidden_layer_units'])
     print 'MINI_BATCH_SIZE={}'.format(variables['mini_batch_size'])
     print 'LEARNING_RATE={}'.format(variables['learning_rate'])
+    print 'TEST_DATA={}'.format(test_data_label)
 
-def trial(variables, training_data, test_data):
+
+def trial(variables, training_data, test_data_label):
     """ Creates a network given the provided parameters, and runs Stochastic
         Gradient Descent on the network. Returns the elapsed time of the run.
     """
-    log(variables)
+    log(variables, test_data_label)
     topology = [784]
     for i in range(variables['hidden_layers']):
         topology.append(variables['hidden_layer_units'])
@@ -56,14 +58,14 @@ def trial(variables, training_data, test_data):
             30,
             variables['mini_batch_size'],
             variables['learning_rate'],
-            test_data)
+            variables['test_data'])
     t2 = time()
     elapsed = t2-t1
     print 'ELAPSED TIME: {} seconds'.format(elapsed)
     print '====================================='
     return elapsed
 
-def run(training_data, test_data):
+def run(training_data, validation_data, test_data):
     """ 'Main' function. Displays hardware information, then conducts
         trials for each of the different parameters laid out in the *_trials
         variables (lists).
@@ -78,46 +80,53 @@ def run(training_data, test_data):
     hidden_layer_units_trials = [10, 30, 50]
     learning_rate_trials = [0.01, 3, 30]
     mini_batch_size_trials = [1, 10, 100]
+    test_data_trials = [('validation', validation_data),
+                        ('test', test_data)]
+
+    #TODO training data as test data gives an error. Should be able to do
+    # test_data_trials.append(('training', training_data))
 
     # Base parameters from which to change one at a time
     standard = {'hidden_layers': 1,
                 'hidden_layer_units': 30,
                 'learning_rate': 3.0,
-                'mini_batch_size': 10}
+                'mini_batch_size': 10,
+                'test_data': 'dummy'}
+
     total_time = 0
     num_trials = 0
 
-    # Run trial for each number of hidden layers
-    for hidden_layer_amt in hidden_layer_trials:
-        variables = deepcopy(standard)
-        variables['hidden_layers'] = hidden_layer_amt
-        total_time += trial(variables, training_data, test_data)
-        num_trials += 1
+    for test_data_label, test_data in test_data_trials:
 
-    # Run trial for each size of hidden layer
-    for hidden_layer_units_amt in hidden_layer_units_trials:
         variables = deepcopy(standard)
-        variables['hidden_layer_units'] = hidden_layer_units_amt
-        total_time += trial(variables, training_data, test_data)
-        num_trials += 1
+        variables['test_data'] = test_data
 
-    # Run trial for each learning rate value
-    for learning_rate_amt in learning_rate_trials:
-        variables = deepcopy(standard)
-        variables['learning_rate'] = learning_rate_amt
-        total_time += trial(variables, training_data, test_data)
-        num_trials += 1
+        # Run trial for each value of hidden layers
+        for hidden_layer_amt in hidden_layer_trials:
+            variables['hidden_layers'] = hidden_layer_amt
+            total_time += trial(variables, training_data, test_data_label)
+            num_trials += 1
+        # Run trial for each size of hidden layer
+        for hidden_layer_units_amt in hidden_layer_units_trials:
+            variables['hidden_layer_units'] = hidden_layer_units_amt
+            total_time += trial(variables, training_data, test_data_label)
+            num_trials += 1
 
-    # Run trial for each mini batch size
-    for mini_batch_size_amt in mini_batch_size_trials:
-        variables = deepcopy(standard)
-        variables['mini_batch_size'] = mini_batch_size_amt
-        total_time += trial(variables, training_data, test_data)
-        num_trials += 1
+        # Run trial for each learning rate value
+        for learning_rate_amt in learning_rate_trials:
+            variables['learning_rate'] = learning_rate_amt
+            total_time += trial(variables, training_data, test_data_label)
+            num_trials += 1
+
+        # Run trial for each mini batch size
+        for mini_batch_size_amt in mini_batch_size_trials:
+            variables['mini_batch_size'] = mini_batch_size_amt
+            total_time += trial(variables, training_data, test_data_label)
+            num_trials += 1
 
     print '====================================='
     print 'TOTAL DURATION: {}'.format(total_time)
     print 'NUM_TRIALS: {}'.format(num_trials)
 
 training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
-run(training_data, test_data)
+run(training_data, validation_data, test_data)
