@@ -8,9 +8,17 @@ import os
 from PIL import Image
 import numpy as np
 
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+
 # scales images down to this size (making it square)
 # so that network isn't gigantic
 input_im_size = 30
+
+nEpochs = 30
+
+# global variable that collects all the accuracies to be plotted
+all_results = {}
 
 """
 Syntax for important functions:
@@ -38,7 +46,7 @@ def main():
         #sys.exit()
 
     # Redirect "print" output to file
-    #sys.stdout = open(record_file, 'w')
+    sys.stdout = open(record_file, 'w')
     git_root_dir = os.path.normpath(prev_dir + os.sep + os.pardir)
     #print git_root_dir
 
@@ -46,6 +54,8 @@ def main():
             os.path.join(git_root_dir,'scraper','examples'))
 
     run(training_data, validation_data, test_data)
+
+    create_plots(os.path.join(prev_dir,'art_plots'))
 
 def art_dataset_loader(folder,vectorize_labels=False):
     files = os.listdir(folder)
@@ -113,16 +123,56 @@ def trial(variables, training_data, test_data_label):
     topology.append(2)
     net = network.Network(topology)
     t1 = time()
-    net.SGD(training_data,
-            30,
-            variables['mini_batch_size'],
-            variables['learning_rate'],
-            variables['test_data'])
+    accuracies = net.SGD(training_data,
+                         nEpochs,
+                         variables['mini_batch_size'],
+                         variables['learning_rate'],
+                         variables['test_data'])
     t2 = time()
     elapsed = t2-t1
     print 'ELAPSED TIME: {} seconds'.format(elapsed)
     print '====================================='
+
+    variable_tuple = (variables['hidden_layers'],
+                      variables['hidden_layer_units'],
+                      variables['learning_rate'],
+                      variables['mini_batch_size'])
+
+    try:
+        all_results[variable_tuple].update({test_data_label :   accuracies})
+    except KeyError:
+        all_results.update({variable_tuple  :   {test_data_label :   accuracies}})
+
     return elapsed
+
+def create_plots(folder):
+    epochs = range(nEpochs)
+    for k,v in all_results.items():
+        training = v['training']
+        validation = v['validation']
+        test = v['test']
+
+        ys = [training, validation, test]
+
+        scatters = []
+
+        colors = cm.rainbow(np.linspace(0, 1, len(ys)))
+        for y, c in zip(ys, colors):
+            scatters.append(plt.scatter(epochs, y, color=c))
+
+        plt.legend(tuple(scatters),
+               ('Training', 'Validation', 'Testing'),
+               scatterpoints=1,
+               loc='lower right',
+               ncol=3,
+               fontsize=8)
+
+        plt.title('%s Hypervariables: Accuracies' % str(k))
+        #plt.show()
+        plt.draw()
+        fig = plt.gcf()
+        fig.savefig(os.path.join(folder,'%s_plot.png' % str(k)))
+        plt.clf()
 
 def run(training_data, validation_data, test_data):
     """ 'Main' function. Displays hardware information, then conducts
@@ -130,16 +180,19 @@ def run(training_data, validation_data, test_data):
         variables (lists).
     """
     print ('CPUs: {},\n'
-           'Memory: {}GB,\n'
+           'Memory: {} GB,\n'
            'Processor: {},\n'
-           'Clock_Speed: {}\n').format(1, 0.5, 'Intel Xeon', 'up to 3.3 GHz')
+           'Clock_Speed: {}\n').format(4, 16, 'Intel Xeon CPU E5-1620 v2', 'up to 3.7 GHz')
 
     # Parameter values to test
     hidden_layer_trials = [0, 1, 2]
     hidden_layer_units_trials = [10, 30, 50]
     learning_rate_trials = [0.01, 3, 30]
     mini_batch_size_trials = [1, 10, 100]
-    test_data_trials = [('training', training_data),
+
+    # for testing the training set
+    unvectorized_training_data = [(x,np.where(y==1)[0][0]) for x,y in training_data]
+    test_data_trials = [('training', unvectorized_training_data),
                         ('validation', validation_data),
                         ('test', test_data)]
 
@@ -161,10 +214,9 @@ def run(training_data, validation_data, test_data):
         variables = deepcopy(standard)
         variables['test_data'] = test_data
 
-        total_time += trial(variables, training_data, test_data_label)
-        num_trials += 1
+        # total_time += trial(variables, training_data, test_data_label)
+        # num_trials += 1
 
-        '''
         # Run trial for each value of hidden layers
         for hidden_layer_amt in hidden_layer_trials:
             variables['hidden_layers'] = hidden_layer_amt
@@ -194,7 +246,6 @@ def run(training_data, validation_data, test_data):
             variables['mini_batch_size'] = mini_batch_size_amt
             total_time += trial(variables, training_data, test_data_label)
             num_trials += 1
-        '''
 
     print '====================================='
     print 'TOTAL DURATION: {}'.format(total_time)

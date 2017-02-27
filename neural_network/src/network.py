@@ -53,6 +53,7 @@ class Network(object):
         tracking progress, but slows things down substantially."""
         if test_data: n_test = len(test_data)
         n = len(training_data)
+        accuracies = []
         for j in xrange(epochs):
             random.shuffle(training_data)
             mini_batches = [
@@ -61,10 +62,14 @@ class Network(object):
             for mini_batch in mini_batches:
                 self.update_mini_batch(mini_batch, eta)
             if test_data:
+                nCorrect = self.evaluate(test_data)
                 print "Epoch {0}: {1} / {2}".format(
-                    j, self.evaluate(test_data), n_test)
+                    j, nCorrect, n_test)
+                accuracies.append(float(nCorrect) / n_test)
             else:
                 print "Epoch {0} complete".format(j)
+
+        return accuracies
 
     def update_mini_batch(self, mini_batch, eta):
         """Update the network's weights and biases by applying
@@ -83,8 +88,8 @@ class Network(object):
                        for b, nb in zip(self.biases, nabla_b)]
 
     def backprop(self, x, y):
-        print x.shape
-        print y
+        # print x.shape
+        # print y
         """Return a tuple ``(nabla_b, nabla_w)`` representing the
         gradient for the cost function C_x.  ``nabla_b`` and
         ``nabla_w`` are layer-by-layer lists of numpy arrays, similar
@@ -96,9 +101,7 @@ class Network(object):
         activations = [x] # list to store all the activations, layer by layer
         zs = [] # list to store all the z vectors, layer by layer
         for b, w in zip(self.biases, self.weights):
-            print b
             z = np.dot(w, activation)+b
-            print z
             zs.append(z)
             activation = sigmoid(z)
             activations.append(activation)
@@ -128,6 +131,7 @@ class Network(object):
         neuron in the final layer has the highest activation."""
         test_results = [(np.argmax(self.feedforward(x)), y)
                         for (x, y) in test_data]
+        # print test_results[0]
         return sum(int(x == y) for (x, y) in test_results)
 
     def cost_derivative(self, output_activations, y):
