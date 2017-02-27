@@ -1,0 +1,17 @@
+CPUs: 1,
+Memory: 0.5GB,
+Processor: Intel Xeon,
+Clock_Speed: up to 3.3 GHz
+
+=====================================
+CONDUCTING TRIAL
+#HIDDEN_LAYERS=1
+#UNITS_IN_HIDDEN_LAYER=30
+MINI_BATCH_SIZE=10
+LEARNING_RATE=3.0
+TEST_DATA=training
+(900L, 1L)
+[1 0]
+aded modules[24m: network[0m
+ERROR: File already exists
+ERROR: Please provide name for test
