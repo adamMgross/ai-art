@@ -39,6 +39,7 @@ class Network(object):
         """Return the output of the network if ``a`` is input."""
         for b, w in zip(self.biases, self.weights):
             a = sigmoid(np.dot(w, a)+b)
+            # print a
         return a
 
     def SGD(self, training_data, epochs, mini_batch_size, eta,
@@ -89,7 +90,7 @@ class Network(object):
 
     def backprop(self, x, y):
         # print x.shape
-        # print y
+        # print y.shape
         """Return a tuple ``(nabla_b, nabla_w)`` representing the
         gradient for the cost function C_x.  ``nabla_b`` and
         ``nabla_w`` are layer-by-layer lists of numpy arrays, similar
@@ -101,10 +102,13 @@ class Network(object):
         activations = [x] # list to store all the activations, layer by layer
         zs = [] # list to store all the z vectors, layer by layer
         for b, w in zip(self.biases, self.weights):
+            # print w.shape, activation.shape, b.shape
             z = np.dot(w, activation)+b
             zs.append(z)
             activation = sigmoid(z)
             activations.append(activation)
+
+        # print zs[-1].shape
         # backward pass
         delta = self.cost_derivative(activations[-1], y) * \
             sigmoid_prime(zs[-1])

@@ -13,7 +13,7 @@ import matplotlib.cm as cm
 
 # scales images down to this size (making it square)
 # so that network isn't gigantic
-input_im_size = 30
+input_im_size = 150
 
 nEpochs = 30
 
@@ -55,7 +55,7 @@ def main():
 
     run(training_data, validation_data, test_data)
 
-    create_plots(os.path.join(prev_dir,'art_plots'))
+    create_plots(os.path.join(prev_dir,'art_plots_resolution=150'))
 
 def art_dataset_loader(folder,vectorize_labels=False):
     files = os.listdir(folder)
@@ -75,12 +75,12 @@ def art_dataset_loader(folder,vectorize_labels=False):
         # surrealist corresponds to label=1
         if label == 'surrealist':
             if vectorize_labels:
-                labeled_data.append((pix,np.array([0,1])))
+                labeled_data.append((pix,np.array([[0],[1]])))
             else:
                 labeled_data.append((pix,1))
         else:
             if vectorize_labels:
-                labeled_data.append((pix,np.array([1,0])))
+                labeled_data.append((pix,np.array([[1],[0]])))
             else:
                 labeled_data.append((pix,0))
 

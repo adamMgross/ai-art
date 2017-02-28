@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
-nEpochs = 1
+nEpochs = 30
 
 # global variable that collects all the accuracies to be plotted
 all_results = {}
@@ -153,10 +153,10 @@ def run(training_data, validation_data, test_data):
         variables = deepcopy(standard)
         variables['test_data'] = test_data
 
-        total_time += trial(variables, training_data, test_data_label)
-        num_trials += 1
+        # total_time += trial(variables, training_data, test_data_label)
+        # num_trials += 1
 
-        '''
+        
         # Run trial for each value of hidden layers
         for hidden_layer_amt in hidden_layer_trials:
             variables['hidden_layers'] = hidden_layer_amt
@@ -186,7 +186,7 @@ def run(training_data, validation_data, test_data):
             variables['mini_batch_size'] = mini_batch_size_amt
             total_time += trial(variables, training_data, test_data_label)
             num_trials += 1
-        '''
+        
 
     print '====================================='
     print 'TOTAL DURATION: {}'.format(total_time)
