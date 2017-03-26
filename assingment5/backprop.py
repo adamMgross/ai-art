@@ -3,6 +3,12 @@ import itertools
 import functools
 import operator
 
+# length of binary strings
+n = 2
+samples = generate_samples(n)
+LAYERS = 3
+biases = [np.random.randn() for x in range(LAYERS)]
+weights = [np.random.randn() for x in range(LAYERS)]
 
 def generate_samples(length):
     """ Generates all binary vectors of the given length, then outputs a list of tuples
@@ -12,22 +18,6 @@ def generate_samples(length):
     inputs = [tuple([int(i) for i in s]) for s in binary_strings]
     return [(x, (any(x), all(x), not all(x), functools.reduce(operator.xor, x))) for x in inputs]
 
-
-n = 2
-samples = generate_samples(n)
-LAYERS = 3
-biases = [np.random.randn() for x in range(LAYERS)]
-weights = [np.random.randn() for x in range(LAYERS)]
-
-        
-def feed_forward(x):
-    a = sigmoid(x)
-    zs = []
-    for i in range(LAYERS):
-        z_i = weights[i] * a + biases[i]
-        zs.append(z_i)
-        a = signmoid(z_i)
-    return zs
 
 
 def hadamard(a, b):
@@ -42,9 +32,9 @@ def backprop(x):
     error = (sigmoid(zs[-1]) - outputs) - sigmoid_prime(zs[-1])
     errors.apppend(error)
     for z, i in enumerate(reversed(zs[:-1])):
-        delta = hadamard(weights[-i -1] * errors[-i - 1], sigmoid_prime(zs[-i -1])
+        delta = hadamard(weights[-i -1] * errors[-i - 1], sigmoid_prime(zs[-i -1]))
         errors = [delta] + errors
-        gradients = [{'dc_dw': sigmoid(zs[i-1] * errors[i]), 
+        gradients = [{'dc_dw': sigmoid(zs[i-1] * errors[i]),
                       'dc_db': errors[i]}
                       for i in range(1, LAYERS + 1)]
     return gradients
@@ -56,4 +46,3 @@ def sigmoid(z):
 
 def sigmoid_prime(z):
     return sigmoid(z) * (1 - sigmoid(z))
-

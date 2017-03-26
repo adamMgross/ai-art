@@ -13,7 +13,7 @@ import matplotlib.cm as cm
 
 # scales images down to this size (making it square)
 # so that network isn't gigantic
-input_im_size = 150
+input_im_size = 30
 
 nEpochs = 30
 
