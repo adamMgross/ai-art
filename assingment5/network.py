@@ -78,6 +78,9 @@ class Network(object):
                 print layer_b
         '''
 
+        print self.topology
+        print 'Final Cost: %.5f\n' % round(epoch_costs[-1], 5)
+
         return epoch_weights, epoch_biases, epoch_costs
 
     # performs one iteration: calculates average partials across

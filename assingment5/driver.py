@@ -33,7 +33,7 @@ def main():
     XOR_training = [(x,np.array([y[3]])) for x,y in training_set]
 
     name = 'XOR_%d-%d-%d' % tuple(XOR_topology)
-    # experiment(XOR_topology, XOR_training, name)
+    experiment(XOR_topology, XOR_training, name)
 
     for nUnits_1 in range(1,5):
         for nUnits_2 in range(5):
