@@ -1,6 +1,9 @@
 import random
 import numpy as np
 
+from copy import deepcopy
+from collections import OrderedDict
+
 # basic class for fully-connected neural network
 class Network(object):
 
@@ -47,12 +50,17 @@ class Network(object):
     def train(self, training_data, nEpochs, learning_rate):
         n = len(training_data)
 
-        epoch_weights = []
-        epoch_biases = []
+        epoch_weights = OrderedDict()
+        epoch_biases = OrderedDict()
         epoch_costs = []
         for epoch in range(nEpochs):
-            epoch_weights.append(self.weights)
-            epoch_biases.append(self.biases)
+            # print self.weights
+            # print self.biases
+            epoch_weights.update({epoch : deepcopy(self.weights)})
+            epoch_biases.update({epoch : deepcopy(self.biases)})
+            # for i in range(epoch+1):
+                # print epoch_weights[i]
+                # print epoch_biases[i]
 
             random.shuffle(training_data)
 
@@ -62,7 +70,13 @@ class Network(object):
 
             epoch_costs.append(self.cost)
 
-            #print('Epoch %d finished training' % epoch)
+            # print('Epoch %d finished training' % epoch)
+
+        '''
+        for e_b in epoch_biases:
+            for layer_b in e_b:
+                print layer_b
+        '''
 
         return epoch_weights, epoch_biases, epoch_costs
 
@@ -71,6 +85,7 @@ class Network(object):
     # gradient descent update rule
     def update_step(self, training_data, learning_rate):
         n = len(training_data)
+        # print self.topology
 
         # partials of cost w.r.t weights and biases for each layer
         delta_w = [np.zeros(layer_w.shape) for layer_w in self.weights]
@@ -79,11 +94,22 @@ class Network(object):
             # partials of cost w.r.t weights and biases for each instance
             dw, db = self.backprop(x, label)
             for l in range(self.nLayers):
+                # print 'layer %d' % l
+                # print delta_w[l]
+                # print dw[l]
                 delta_w[l] += dw[l]
+                # print delta_b[l]
+                # print db[l]
                 delta_b[l] += db[l]
 
         # gradient descent
         for l in range(1,self.nLayers):
+
+            # print 'weights in layer %d' % l
+            # print self.weights[l]
+            # print 'biases in layer %d' % l
+            # print self.biases[l]
+
             self.weights[l] -= learning_rate * delta_w[l] / float(n)
             self.biases[l] -= learning_rate * delta_b[l] / float(n)
 

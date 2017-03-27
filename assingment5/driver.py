@@ -33,16 +33,16 @@ def main():
     XOR_training = [(x,np.array([y[3]])) for x,y in training_set]
 
     name = 'XOR_%d-%d-%d' % tuple(XOR_topology)
-    experiment(XOR_topology, XOR_training, name)
+    # experiment(XOR_topology, XOR_training, name)
 
     for nUnits_1 in range(1,5):
         for nUnits_2 in range(5):
             if nUnits_2 == 0:
                 topology = [n,nUnits_1,4]
                 name = 'multi_%d-%d-%d' % tuple(topology)
-
-            topology = [n,nUnits_1,nUnits_2,4]
-            name = 'multi_%d-%d-%d-%d' % tuple(topology)
+            else:
+                topology = [n,nUnits_1,nUnits_2,4]
+                name = 'multi_%d-%d-%d-%d' % tuple(topology)
 
             experiment(topology,training_set,name)
 
@@ -90,8 +90,8 @@ def create_plots(results,name):
         nUnits = len(epoch_weights[0][l])
         for j in range(nUnits):
             # weights and biases for jth unit in layer l over all epochs
-            ep_weights = [w[l][j] for w in epoch_weights]
-            ep_biases = [b[l][j] for b in epoch_biases]
+            ep_weights = [w[l][j] for w in epoch_weights.values()]
+            ep_biases = [b[l][j] for b in epoch_biases.values()]
 
             nWeights = len(ep_weights[0])
             ys = [ep_biases]
