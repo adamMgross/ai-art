@@ -14,7 +14,6 @@ https://www.artsy.net/artist/jean-louis-forain
 https://www.artsy.net/artist/julian-alden-weir
 https://www.artsy.net/artist/lesser-ury
 https://www.artsy.net/artist/john-singer-sargent
-https://www.artsy.net/artist/paul-cezanne
 https://www.artsy.net/artist/george-inness
 https://www.artsy.net/artist/frederic-bazille
 https://www.artsy.net/artist/albert-pinkham-ryder
@@ -39,3 +38,18 @@ https://www.artsy.net/artist/emile-bernard
 https://www.artsy.net/artist/louis-abel-truchet
 https://www.artsy.net/artist/dimitrie-berea
 https://www.artsy.net/artist/henri-edmond-cross
+https://www.artsy.net/artist/henri-eugene-le-sidaner
+https://www.artsy.net/artist/auguste-rodin
+https://www.artsy.net/artist/max-liebermann
+https://www.artsy.net/artist/colin-campbell-cooper
+https://www.artsy.net/artist/jane-peterson
+https://www.artsy.net/artist/john-joseph-enneking
+https://www.artsy.net/artist/george-hitchcock
+https://www.artsy.net/artist/theodore-robinson
+https://www.artsy.net/artist/johann-berthelsen
+https://www.artsy.net/artist/otto-henry-bacher
+https://www.artsy.net/artist/frank-duveneck
+https://www.artsy.net/artist/albert-besnard
+https://www.artsy.net/artist/christian-rohlfs
+https://www.artsy.net/artist/hercules-brabazon-brabazon
+https://www.artsy.net/artist/charles-herbert-woodbury
