@@ -50,7 +50,7 @@ def train_test_split(dataset, test_size = 0.25, shuffle = False, random_seed = 0
         Shuffling True or False
         Random seed
     """
-    length = dataset.real_length()
+    length = len(dataset)
     indices = list(range(1,length))
 
     if shuffle == True:
