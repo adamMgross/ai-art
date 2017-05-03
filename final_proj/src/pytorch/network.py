@@ -32,7 +32,7 @@ import inception
 image_folder = '../../imgs'
 nEpochs = 1
 learning_rate = 0.1
-batch_size = 20
+batch_size = 10
 
 #USE_CUDA = torch.cuda.is_available()
 USE_CUDA = False
@@ -102,12 +102,14 @@ def load_data(image_folder):
     train_loader = DataLoader(training_ds,
                       batch_size=20,
                       sampler=train_sampler,
-                      num_workers=4)
+                      num_workers=4,
+                      pin_memory=True)
 
     test_loader = DataLoader(testing_ds,
                       batch_size=1,
                       sampler=test_sampler,
-                      num_workers=1)
+                      num_workers=1,
+                      pin_memory=True)
 
     return train_loader, test_loader
 
