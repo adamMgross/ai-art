@@ -197,7 +197,7 @@ def train(train_loader, model, criterion, optimizer, epoch):
                   batch_time.val, batch_time.avg,
                   data_time.val, data_time.avg,
                   losses.val, losses.avg,
-                  top1.val, top1.avg))
+                  float(top1.val), float(top1.avg)))
 
 def test(test_loader, model, criterion):
     batch_time = AverageMeter()
@@ -240,7 +240,7 @@ def test(test_loader, model, criterion):
                   batch_time.val, batch_time.avg,
                   data_time.val, data_time.avg,
                   losses.val, losses.avg,
-                  top1.val, top1.avg))
+                  float(top1.val), float(top1.avg)))
 
     print(' * Prec@1 {top1.avg:.3f}'
           .format(top1=top1))
@@ -252,21 +252,21 @@ def accuracy(output, target, topk=(1,)):
     maxk = max(topk)
     batch_size = target.size(0)
 
-    print(output)
-    print(target)
+    #print(output)
+    #print(target)
 
     _, pred = output.topk(maxk, 1, True, True)
     pred = pred.t()
     correct = pred.eq(target.view(1, -1).expand_as(pred))
 
-    print(correct)
+    #print(correct)
 
     res = []
     for k in topk:
         correct_k = correct[:k].view(-1).float().sum(0)
         res.append(correct_k.mul_(100.0 / batch_size))
 
-    print(res)
+    #print(res)
     return res
 
 class AverageMeter(object):
@@ -284,7 +284,7 @@ class AverageMeter(object):
         self.val = val
         self.sum += val * n
         self.count += n
-        self.avg = self.sum / self.count
+        self.avg = float(self.sum) / self.count
 
 if __name__ == '__main__':
     main()
