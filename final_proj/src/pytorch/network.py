@@ -27,7 +27,7 @@ import torchvision.transforms as T
 import torchvision.models as M
 import torchvision.datasets as datasets
 
-#import inception
+import inception
 
 image_folder = '../../imgs'
 nEpochs = 10
@@ -113,7 +113,10 @@ def load_data(image_folder):
 
 def main():
     # model = M.vgg19(pretrained=True)
-    model = M.inception_v3(pretrained=True,aux_logits=False)
+    # model = M.inception_v3(pretrained=True,aux_logits=False)
+
+    # fuck this aux_logit bullshit; redefined inception.py to ignore this
+    model = inception.inception_v3(pretrained=True)
     for param in model.parameters():
         # freeze all the layers
         param.requires_grad = False
