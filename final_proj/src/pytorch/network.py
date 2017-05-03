@@ -176,7 +176,12 @@ def train(train_loader, model, criterion, optimizer, epoch):
         # measure accuracy and record loss
         prec1 = accuracy(output.data, target, topk=(1,))
         losses.update(loss.data[0], input.size(0))
+        print(prec1[0])
         top1.update(prec1[0], input.size(0))
+        print(top1.val)
+        print(top1.avg)
+
+        print(prec1[0,0])
 
         # compute gradient and do SGD step
         optimizer.zero_grad()
@@ -284,7 +289,7 @@ class AverageMeter(object):
         self.val = val
         self.sum += val * n
         self.count += n
-        self.avg = float(self.sum) / self.count
+        self.avg = self.sum / self.count
 
 if __name__ == '__main__':
     main()
