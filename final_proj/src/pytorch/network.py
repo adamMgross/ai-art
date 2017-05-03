@@ -129,7 +129,7 @@ def main():
     # define loss function (criterion) and optimizer
     criterion = nn.CrossEntropyLoss().cuda() if USE_CUDA else nn.CrossEntropyLoss()
 
-    optimizer = optim.SGD(model.parameters(), learning_rate,
+    optimizer = optim.SGD(model.fc.parameters(), learning_rate,
                             momentum=0.9,
                             weight_decay=1e-4)
 
