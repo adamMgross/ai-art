@@ -93,6 +93,7 @@ class Inception3(nn.Module):
         print('okay3')
         # 35 x 35 x 192
         x = self.Mixed_5b(x)
+        print('okay3a')
         # 35 x 35 x 256
         x = self.Mixed_5c(x)
         # 35 x 35 x 288
@@ -153,16 +154,20 @@ class InceptionA(nn.Module):
 
     def forward(self, x):
         branch1x1 = self.branch1x1(x)
+        print('okay3a_1')
 
         branch5x5 = self.branch5x5_1(x)
         branch5x5 = self.branch5x5_2(branch5x5)
+        print('okay3a_2')
 
         branch3x3dbl = self.branch3x3dbl_1(x)
         branch3x3dbl = self.branch3x3dbl_2(branch3x3dbl)
         branch3x3dbl = self.branch3x3dbl_3(branch3x3dbl)
+        print('okay3a_3')
 
         branch_pool = F.avg_pool2d(x, kernel_size=3, stride=1, padding=1)
         branch_pool = self.branch_pool(branch_pool)
+        print('okay3a_4')
 
         outputs = [branch1x1, branch5x5, branch3x3dbl, branch_pool]
         return torch.cat(outputs, 1)
