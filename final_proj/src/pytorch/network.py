@@ -169,9 +169,12 @@ def train(train_loader, model, criterion, optimizer, epoch):
         input_var = var(input)
         target_var = var(target)
 
+        print('okay0')
         # compute output
         output = model(input_var)
+        print('okay6')
         loss = criterion(output, target_var)
+        print('okay7')
 
         # measure accuracy and record loss
         prec1 = accuracy(output.data, target, topk=(1,))
@@ -180,8 +183,11 @@ def train(train_loader, model, criterion, optimizer, epoch):
 
         # compute gradient and do SGD step
         optimizer.zero_grad()
+        print('okay8')
         loss.backward()
+        print('okay9')
         optimizer.step()
+        print('okay10')
 
         # measure elapsed time
         batch_time.update(time.time() - end)

@@ -76,18 +76,21 @@ class Inception3(nn.Module):
         #print(x.size())
         # 299 x 299 x 3
         x = self.Conv2d_1a_3x3(x)
+        print('okay1')
         # 149 x 149 x 32
         x = self.Conv2d_2a_3x3(x)
         # 147 x 147 x 32
         x = self.Conv2d_2b_3x3(x)
         # 147 x 147 x 64
         x = F.max_pool2d(x, kernel_size=3, stride=2)
+        print('okay2')
         # 73 x 73 x 64
         x = self.Conv2d_3b_1x1(x)
         # 73 x 73 x 80
         x = self.Conv2d_4a_3x3(x)
         # 71 x 71 x 192
         x = F.max_pool2d(x, kernel_size=3, stride=2)
+        print('okay3')
         # 35 x 35 x 192
         x = self.Mixed_5b(x)
         # 35 x 35 x 256
@@ -117,11 +120,13 @@ class Inception3(nn.Module):
         x = self.Mixed_7c(x)
         # 8 x 8 x 2048
         x = F.avg_pool2d(x, kernel_size=8)
+        print('okay4')
         # 1 x 1 x 2048
         x = F.dropout(x, training=self.training)
         # 1 x 1 x 2048
         x = x.view(x.size(0), -1)
         # 2048
+        print('okay5')
         x = self.fc(x)
         # 1000 (num_classes)
         '''
