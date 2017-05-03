@@ -112,7 +112,7 @@ def load_data(image_folder):
 
 def main():
     # model = M.vgg19(pretrained=True)
-    model = M.inception_v3(pretrained=True,num_classes=2)
+    model = M.inception_v3(pretrained=True)
     for param in model.parameters():
         # freeze all the layers
         param.requires_grad = False
