@@ -196,7 +196,7 @@ def train(train_loader, model, criterion, optimizer, epoch):
                   % (epoch, i, len(train_loader),
                   batch_time.val, batch_time.avg,
                   data_time.val, data_time.avg,
-                  loss.val, loss.avg,
+                  losses.val, losses.avg,
                   top1.val, top1.avg))
 
 def test(test_loader, model, criterion):
@@ -238,7 +238,7 @@ def test(test_loader, model, criterion):
                   % (epoch, i, len(train_loader),
                   batch_time.val, batch_time.avg,
                   data_time.val, data_time.avg,
-                  loss.val, loss.avg,
+                  losses.val, losses.avg,
                   top1.val, top1.avg))
 
     print(' * Prec@1 {top1.avg:.3f}'
