@@ -147,7 +147,7 @@ def main():
         # train for one epoch
         train(train_loader, model, criterion, optimizer, epoch)
         top1 = test(test_loader, model, criterion)
-        print('Epoch: [{0}]\tAccuracy: {1}'.format(epoch,top1))
+        print('Epoch: [{0}]\tTest_Accuracy: {1}'.format(epoch,top1))
 
 def train(train_loader, model, criterion, optimizer, epoch):
     batch_time = AverageMeter()
@@ -197,12 +197,11 @@ def train(train_loader, model, criterion, optimizer, epoch):
                   'Time %.3f (avg: %.3f)\t'
                   'Data %.3f (avg: %.3f)\t'
                   'Loss %.3f (avg: %.3f)\t'
-                  'Prec@1 %.3f (avg: %.3f)\t'
                   % (epoch, i, len(train_loader),
                   batch_time.val, batch_time.avg,
                   data_time.val, data_time.avg,
-                  losses.val, losses.avg,
-                  float(top1.val), float(top1.avg)))
+                  losses.val, losses.avg), end='')
+            print('Prec@1 {} (avg: {})\t'.format(top1.val,top1.avg))
 
 def test(test_loader, model, criterion):
     batch_time = AverageMeter()
@@ -240,12 +239,11 @@ def test(test_loader, model, criterion):
                   'Time %.3f (avg: %.3f)\t'
                   'Data %.3f (avg: %.3f)\t'
                   'Loss %.3f (avg: %.3f)\t'
-                  'Prec@1 %.3f (avg: %.3f)\t'
                   % (epoch, i, len(train_loader),
                   batch_time.val, batch_time.avg,
                   data_time.val, data_time.avg,
-                  losses.val, losses.avg,
-                  float(top1.val), float(top1.avg)))
+                  losses.val, losses.avg), end='')
+            print('Prec@1 {} (avg: {})\t'.format(top1.val,top1.avg))
 
     print(' * Prec@1 {top1.avg:.3f}'
           .format(top1=top1))
