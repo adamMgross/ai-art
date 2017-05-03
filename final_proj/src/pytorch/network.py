@@ -195,7 +195,7 @@ def train(train_loader, model, criterion, optimizer, epoch):
                   'Prec@1 %.3f (avg: %.3f)\t'
                   % (epoch, i, len(train_loader),
                   batch_time.val, batch_time.avg,
-                  data_time.val. data_time.avg,
+                  data_time.val, data_time.avg,
                   loss.val, loss.avg,
                   top1.val, top1.avg))
 
@@ -228,6 +228,7 @@ def test(test_loader, model, criterion):
         batch_time.update(time.time() - end)
         end = time.time()
 
+
         if i % 10 == 0:
             print('Epoch: [%d][%d/%d]\t'
                   'Time %.3f (avg: %.3f)\t'
@@ -236,7 +237,7 @@ def test(test_loader, model, criterion):
                   'Prec@1 %.3f (avg: %.3f)\t'
                   % (epoch, i, len(train_loader),
                   batch_time.val, batch_time.avg,
-                  data_time.val. data_time.avg,
+                  data_time.val, data_time.avg,
                   loss.val, loss.avg,
                   top1.val, top1.avg))
 
