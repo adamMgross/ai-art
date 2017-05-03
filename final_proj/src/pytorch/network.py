@@ -75,15 +75,15 @@ def load_data(image_folder):
     normalize = T.Normalize(mean=[0.485, 0.456, 0.406],
                             std=[0.229, 0.224, 0.225])
     training_transforms = T.Compose([
-            T.RandomSizedCrop(224),
+            T.RandomSizedCrop(299),
             T.RandomHorizontalFlip(),
             T.ToTensor(),
             normalize,
     ])
 
     testing_transforms = T.Compose([
-            T.Scale(256),
-            T.CenterCrop(224),
+            T.Scale(299),
+            T.CenterCrop(299),
             T.ToTensor(),
             normalize,
     ])
@@ -116,7 +116,8 @@ def main():
     # model = M.inception_v3(pretrained=True,aux_logits=False)
 
     # fuck this aux_logit bullshit; redefined inception.py to ignore this
-    model = inception.inception_v3(pretrained=True)
+    # transform_input identical to normalize Transform, which we already do
+    model = inception.inception_v3(pretrained=True,transform_input=False)
     for param in model.parameters():
         # freeze all the layers
         param.requires_grad = False
@@ -169,7 +170,7 @@ def train(train_loader, model, criterion, optimizer, epoch):
         target_var = var(target)
 
         # compute output
-        output, _ = model(input_var)
+        output = model(input_var)
         loss = criterion(output, target_var)
 
         # measure accuracy and record loss
