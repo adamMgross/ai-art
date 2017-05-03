@@ -221,6 +221,7 @@ def test(test_loader, model, criterion):
 
         # measure accuracy and record loss
         prec1 = accuracy(output.data, target, topk=(1,))
+        print(prec1)
         losses.update(loss.data[0], input.size(0))
         top1.update(prec1[0], input.size(0))
 
@@ -251,9 +252,14 @@ def accuracy(output, target, topk=(1,)):
     maxk = max(topk)
     batch_size = target.size(0)
 
+    print(output)
+    print(target)
+
     _, pred = output.topk(maxk, 1, True, True)
     pred = pred.t()
     correct = pred.eq(target.view(1, -1).expand_as(pred))
+
+    print(correct)
 
     res = []
     for k in topk:
