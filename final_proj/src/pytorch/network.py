@@ -115,8 +115,8 @@ def main():
         param.requires_grad = False
     # Replace the last fully-connected layer
     # Parameters of newly constructed modules have requires_grad=True by default
-    model.fc = nn.Linear(512, 2) # assuming that the fc7 layer has 512 neurons, otherwise change it
-    #model.classifier._modules['6'] = nn.Linear(4096,2)
+    #model.fc = nn.Linear(512, 2) # assuming that the fc7 layer has 512 neurons, otherwise change it
+    model.classifier._modules['6'] = nn.Linear(4096,2)
 
     if USE_CUDA:
         model.cuda()
