@@ -8,8 +8,8 @@ import math
 import random
 import numpy as np
 import sys
-import matplotlib
-import matplotlib.pyplot as plt
+#import matplotlib
+#import matplotlib.pyplot as plt
 from collections import namedtuple
 from itertools import count
 from copy import deepcopy
@@ -34,8 +34,8 @@ nEpochs = 1
 learning_rate = 0.1
 batch_size = 10
 
-#USE_CUDA = torch.cuda.is_available()
-USE_CUDA = False
+USE_CUDA = torch.cuda.is_available()
+#USE_CUDA = False
 if USE_CUDA:
     import torch.backends.cudnn as cudnn
     cudnn.benchmark = True
