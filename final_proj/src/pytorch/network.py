@@ -122,7 +122,7 @@ def main():
     #model.classifier._modules['6'] = nn.Linear(4096,2)
 
     if USE_CUDA:
-        model.cuda()
+        model = model.cuda()
 
     train_loader, test_loader = load_data(image_folder)
 
@@ -155,7 +155,9 @@ def train(train_loader, model, criterion, optimizer, epoch):
         # measure data loading time
         data_time.update(time.time() - end)
 
-        #target = target.cuda()
+        if USE_CUDA:
+            target = target.cuda()
+
         input_var = var(input)
         target_var = var(target)
 
@@ -196,7 +198,9 @@ def test(test_loader, model, criterion):
 
     end = time.time()
     for i, (input, target) in enumerate(test_loader):
-        #target = target.cuda(async=True)
+
+        if USE_CUDA:
+            target = target.cuda()
         input_var = torch.autograd.Variable(input, volatile=True)
         target_var = torch.autograd.Variable(target, volatile=True)
 
