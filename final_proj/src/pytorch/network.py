@@ -166,6 +166,7 @@ def train(train_loader, model, criterion, optimizer, epoch):
         data_time.update(time.time() - end)
 
         if USE_CUDA:
+            input = input.cuda()
             target = target.cuda()
 
         input_var = var(input)
@@ -218,6 +219,7 @@ def test(test_loader, model, criterion):
     for i, (input, target) in enumerate(test_loader):
 
         if USE_CUDA:
+            input = input.cuda()
             target = target.cuda()
         input_var = torch.autograd.Variable(input, volatile=True)
         target_var = torch.autograd.Variable(target, volatile=True)
