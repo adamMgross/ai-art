@@ -30,7 +30,7 @@ import torchvision.datasets as datasets
 import inception
 
 image_folder = '../../imgs'
-nEpochs = 10
+nEpochs = 1
 learning_rate = 0.1
 batch_size = 20
 
@@ -188,13 +188,16 @@ def train(train_loader, model, criterion, optimizer, epoch):
         end = time.time()
 
         if i % 10 == 0:
-            print('Epoch: [{0}][{1}/{2}]\t'
-                  'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
-                  'Data {data_time.val:.3f} ({data_time.avg:.3f})\t'
-                  'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
-                  'Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t'.format(
-                   epoch, i, len(train_loader), batch_time=batch_time,
-                   data_time=data_time, loss=losses, top1=top1))
+            print('Epoch: [%d][%d/%d]\t'
+                  'Time %.3f (avg: %.3f)\t'
+                  'Data %.3f (avg: %.3f)\t'
+                  'Loss %.3f (avg: %.3f)\t'
+                  'Prec@1 %.3f (avg: %.3f)\t'
+                  % (epoch, i, len(train_loader),
+                  batch_time.val, batch_time.avg,
+                  data_time.val. data_time.avg,
+                  loss.val, loss.avg,
+                  top1.val, top1.avg))
 
 def test(test_loader, model, criterion):
     batch_time = AverageMeter()
@@ -226,12 +229,16 @@ def test(test_loader, model, criterion):
         end = time.time()
 
         if i % 10 == 0:
-            print('Test: [{0}/{1}]\t'
-                  'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
-                  'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
-                  'Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t'.format(
-                   i, len(test_loader), batch_time=batch_time, loss=losses,
-                   top1=top1))
+            print('Epoch: [%d][%d/%d]\t'
+                  'Time %.3f (avg: %.3f)\t'
+                  'Data %.3f (avg: %.3f)\t'
+                  'Loss %.3f (avg: %.3f)\t'
+                  'Prec@1 %.3f (avg: %.3f)\t'
+                  % (epoch, i, len(train_loader),
+                  batch_time.val, batch_time.avg,
+                  data_time.val. data_time.avg,
+                  loss.val, loss.avg,
+                  top1.val, top1.avg))
 
     print(' * Prec@1 {top1.avg:.3f}'
           .format(top1=top1))
