@@ -113,7 +113,7 @@ def load_data(image_folder):
 
 def main():
     # model = M.vgg19(pretrained=True)
-    model = M.inception_v3(pretrained=True)
+    model = M.inception_v3(pretrained=True,aux_logits=False)
     for param in model.parameters():
         # freeze all the layers
         param.requires_grad = False
@@ -122,8 +122,8 @@ def main():
     model.fc = nn.Linear(2048, 2) # assuming that the fc7 layer has 2048 neurons, otherwise change it
     #model.classifier._modules['6'] = nn.Linear(4096,2)
 
-    # hack to get Inception_v3 to work
-    model.AuxLogits = M.inception.InceptionAux(768,2)
+    # hack to get Inception_v3 to work (if aux_logits=True)
+    #model.AuxLogits = M.inception.InceptionAux(768,2)
 
     if USE_CUDA:
         model = model.cuda()
