@@ -27,6 +27,8 @@ import torchvision.transforms as T
 import torchvision.models as M
 import torchvision.datasets as datasets
 
+#import inception
+
 image_folder = '../../imgs'
 nEpochs = 10
 learning_rate = 0.1
@@ -109,14 +111,15 @@ def load_data(image_folder):
     return train_loader, test_loader
 
 def main():
-    model = M.vgg19(pretrained=True)
+    # model = M.vgg19(pretrained=True)
+    model = M.inception_v3(pretrained=True,num_classes=2)
     for param in model.parameters():
         # freeze all the layers
         param.requires_grad = False
     # Replace the last fully-connected layer
     # Parameters of newly constructed modules have requires_grad=True by default
-    #model.fc = nn.Linear(512, 2) # assuming that the fc7 layer has 512 neurons, otherwise change it
-    model.classifier._modules['6'] = nn.Linear(4096,2)
+    model.fc = nn.Linear(2048, 2) # assuming that the fc7 layer has 2048 neurons, otherwise change it
+    #model.classifier._modules['6'] = nn.Linear(4096,2)
 
     if USE_CUDA:
         model.cuda()
@@ -157,7 +160,7 @@ def train(train_loader, model, criterion, optimizer, epoch):
         target_var = var(target)
 
         # compute output
-        output = model(input_var)
+        output, _ = model(input_var)
         loss = criterion(output, target_var)
 
         # measure accuracy and record loss
