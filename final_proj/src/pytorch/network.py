@@ -8,12 +8,14 @@ import math
 import random
 import numpy as np
 import sys
-#import matplotlib
-#import matplotlib.pyplot as plt
+import matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
 from collections import namedtuple
 from itertools import count
 from copy import deepcopy
 import time
+import os
 
 import torch
 import torch.nn as nn
@@ -30,9 +32,9 @@ import torchvision.datasets as datasets
 import inception
 
 image_folder = '../../imgs'
-nEpochs = 1
-learning_rate = 0.1
-batch_size = 10
+nEpochs = 100
+learning_rate = 0.01
+batch_size = 5
 
 USE_CUDA = torch.cuda.is_available()
 #USE_CUDA = False
@@ -42,6 +44,35 @@ if USE_CUDA:
     torch.set_default_tensor_type('torch.cuda.FloatTensor')
 
 # dtype = torch.cuda.FloatTensor if USE_CUDA else torch.FloatTensor
+
+def create_plots(results,name):
+    folder = os.path.join(os.getcwd(),name)
+    if not os.path.exists(folder):
+        os.mkdir(folder)
+
+    training_acc, testing_acc = results
+    epochs = range(nEpochs)
+
+    ys = [training_acc, testing_acc]
+    scatters = []
+
+    colors = cm.rainbow(np.linspace(0, 1, len(ys)))
+    for y, c in zip(ys, colors):
+        scatters.append(plt.scatter(epochs, y, color=c, s=10))
+
+    plt.legend(tuple(scatters),
+           ('Training', 'Testing'),
+           scatterpoints=1,
+           loc='lower right',
+           ncol=3,
+           fontsize=8)
+
+    plt.title('Accuracies vs. Epochs')
+    #plt.show()
+    plt.draw()
+    fig = plt.gcf()
+    fig.savefig(os.path.join(folder,'accs_no_aug_lr-001_bs-05.png'))
+    plt.clf()
 
 def train_test_split(dataset, test_size = 0.25, shuffle = False, random_seed = 0):
     """ Return a list of splitted indices from a DataSet.
@@ -88,7 +119,7 @@ def load_data(image_folder):
             normalize,
     ])
 
-    training_ds = datasets.ImageFolder(image_folder, training_transforms)
+    training_ds = datasets.ImageFolder(image_folder, testing_transforms)
     testing_ds = datasets.ImageFolder(image_folder, testing_transforms)
 
     # indices randomly selected from all instances in dataset to be used
@@ -143,13 +174,26 @@ def main():
                             momentum=0.9,
                             weight_decay=1e-4)
 
+    train_start = time.time()
+
+    train_accs = []
+    test_accs = []
     for epoch in range(nEpochs):
         #adjust_learning_rate(optimizer, epoch)
 
         # train for one epoch
-        train(train_loader, model, criterion, optimizer, epoch)
-        top1 = test(test_loader, model, criterion)
-        print('Epoch: [{0}]\tTest_Accuracy: {1}'.format(epoch,top1))
+        train_acc = train(train_loader, model, criterion, optimizer, epoch)
+        test_acc = test(test_loader, model, criterion, epoch)
+
+        train_accs.append(train_acc)
+        test_accs.append(test_acc)
+
+    train_end = time.time()
+
+    print('Total Training/Testing Time: %.3f' % (train_end - train_start))
+
+    results = (train_accs, test_accs)
+    create_plots(results,'Results')
 
 def train(train_loader, model, criterion, optimizer, epoch):
     batch_time = AverageMeter()
@@ -172,12 +216,13 @@ def train(train_loader, model, criterion, optimizer, epoch):
         input_var = var(input)
         target_var = var(target)
 
-        print('okay0')
+        #print('okay0')
         # compute output
         output = model(input_var)
-        print('okay6')
+        #output = nn.Softmax()(output)
+        #print('okay6')
         loss = criterion(output, target_var)
-        print('okay7')
+        #print('okay7')
 
         # measure accuracy and record loss
         prec1 = accuracy(output.data, target, topk=(1,))
@@ -186,30 +231,34 @@ def train(train_loader, model, criterion, optimizer, epoch):
 
         # compute gradient and do SGD step
         optimizer.zero_grad()
-        print('okay8')
+        #print('okay8')
         loss.backward()
-        print('okay9')
+        #print('okay9')
         optimizer.step()
-        print('okay10')
+        #print('okay10')
 
         # measure elapsed time
         batch_time.update(time.time() - end)
         end = time.time()
 
-        if i % 1 == 0:
-            print('Epoch: [%d][%d/%d]\t'
-                  'Time %.3f (avg: %.3f)\t'
-                  'Data %.3f (avg: %.3f)\t'
-                  'Loss %.3f (avg: %.3f)\t'
-                  % (epoch, i, len(train_loader),
-                  batch_time.val, batch_time.avg,
-                  data_time.val, data_time.avg,
-                  losses.val, losses.avg), end='')
-            print('Prec@1 {} (avg: {})\t'.format(top1.val[0],top1.avg[0]))
+    print('Epoch: [%d]\n'
+          '\tTraining Set Performance:\n'
+          '\t\tTime %.3f (avg: %.3f)\n'
+          '\t\tData %.3f (avg: %.3f)\n'
+          '\t\tLoss %.3f (avg: %.3f)\n'
+          % (epoch,
+          batch_time.val, batch_time.avg,
+          data_time.val, data_time.avg,
+          losses.val, losses.avg), end='')
+    print('\n\t\tAccuracy {} (avg: {})\t'.format(top1.val[0],top1.avg[0]))
 
-def test(test_loader, model, criterion):
+    return top1.avg[0]
+
+
+def test(test_loader, model, criterion, epoch):
     batch_time = AverageMeter()
-    losses = AverageMeter()
+    data_time = AverageMeter()
+    #losses = AverageMeter()
     top1 = AverageMeter()
 
     # switch to evaluate mode
@@ -217,6 +266,7 @@ def test(test_loader, model, criterion):
 
     end = time.time()
     for i, (input, target) in enumerate(test_loader):
+        data_time.update(time.time() - end)
 
         if USE_CUDA:
             input = input.cuda()
@@ -226,34 +276,26 @@ def test(test_loader, model, criterion):
 
         # compute output
         output = model(input_var)
-        loss = criterion(output, target_var)
+        #output = nn.Softmax()(output)
+        #loss = criterion(output, target_var)
 
         # measure accuracy and record loss
         prec1 = accuracy(output.data, target, topk=(1,))
         #print(prec1)
-        losses.update(loss.data[0], input.size(0))
+        #losses.update(loss.data[0], input.size(0))
         top1.update(prec1[0], input.size(0))
 
         # measure elapsed time
         batch_time.update(time.time() - end)
         end = time.time()
 
-
-        if i % 10 == 0:
-            print('Epoch: [%d][%d/%d]\t'
-                  'Time %.3f (avg: %.3f)\t'
-                  'Data %.3f (avg: %.3f)\t'
-                  'Loss %.3f (avg: %.3f)\t'
-                  % (epoch, i, len(train_loader),
-                  batch_time.val, batch_time.avg,
-                  data_time.val, data_time.avg,
-                  losses.val, losses.avg), end='')
-            print('Prec@1 {} (avg: {})\t'.format(top1.val,top1.avg))
-
+    '''
     print(' * Prec@1 {top1.avg:.3f}'
           .format(top1=top1))
+    '''
+    print('\n\tTest_Accuracy: {}'.format(top1.avg[0]))
 
-    return top1.avg
+    return top1.avg[0]
 
 def accuracy(output, target, topk=(1,)):
     """Computes the precision@k for the specified values of k"""

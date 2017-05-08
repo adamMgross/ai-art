@@ -77,21 +77,21 @@ class Inception3(nn.Module):
         #print(x.size())
         # 299 x 299 x 3
         x = self.Conv2d_1a_3x3(x)
-        print('okay1')
+        # print('okay1')
         # 149 x 149 x 32
         x = self.Conv2d_2a_3x3(x)
         # 147 x 147 x 32
         x = self.Conv2d_2b_3x3(x)
         # 147 x 147 x 64
         x = F.max_pool2d(x, kernel_size=3, stride=2)
-        print('okay2')
+        #print('okay2')
         # 73 x 73 x 64
         x = self.Conv2d_3b_1x1(x)
         # 73 x 73 x 80
         x = self.Conv2d_4a_3x3(x)
         # 71 x 71 x 192
         x = F.max_pool2d(x, kernel_size=3, stride=2)
-        print('okay3')
+        #print('okay3')
         # 35 x 35 x 192
         '''
         x = self.Alt0(x)
@@ -100,7 +100,7 @@ class Inception3(nn.Module):
         # 8 x 8 x 192
         '''
         x = self.Mixed_5b(x)
-        print('okay3a')
+        #print('okay3a')
         # 35 x 35 x 256
         x = self.Mixed_5c(x)
         # 35 x 35 x 288
@@ -129,13 +129,13 @@ class Inception3(nn.Module):
         x = self.Mixed_7c(x)
         # 8 x 8 x 2048
         x = F.avg_pool2d(x, kernel_size=8)
-        print('okay4')
+        #print('okay4')
         # 1 x 1 x 2048
         x = F.dropout(x, training=self.training)
         # 1 x 1 x 2048
         x = x.view(x.size(0), -1)
         # 2048
-        print('okay5')
+        #print('okay5')
         x = self.fc(x)
         # 1000 (num_classes)
         '''
@@ -162,20 +162,20 @@ class InceptionA(nn.Module):
 
     def forward(self, x):
         branch1x1 = self.branch1x1(x)
-        print('okay3a_1')
+        #print('okay3a_1')
 
         branch5x5 = self.branch5x5_1(x)
         branch5x5 = self.branch5x5_2(branch5x5)
-        print('okay3a_2')
+        #print('okay3a_2')
 
         branch3x3dbl = self.branch3x3dbl_1(x)
         branch3x3dbl = self.branch3x3dbl_2(branch3x3dbl)
         branch3x3dbl = self.branch3x3dbl_3(branch3x3dbl)
-        print('okay3a_3')
+        #print('okay3a_3')
 
         branch_pool = F.avg_pool2d(x, kernel_size=3, stride=1, padding=1)
         branch_pool = self.branch_pool(branch_pool)
-        print('okay3a_4')
+        #print('okay3a_4')
 
         outputs = [branch1x1, branch5x5, branch3x3dbl, branch_pool]
         return torch.cat(outputs, 1)
